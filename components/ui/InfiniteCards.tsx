@@ -118,7 +118,7 @@ export const InfiniteMovingCards = ({
               <div className="relative z-20 mt-6 flex flex-row items-center">
                 {/* add this div for the profile img */}
                 <div className="me-3">
-                  <Image src="/vercel.svg" alt="Lange and Associates Insurance" />
+                  <Image src="/vercel.svg" alt="Lange and Associates Insurance" width={100} height={100}/>
                 </div>
                 <span className="flex flex-col gap-1">
                   {/* change text color, font-normal to font-bold, text-xl */}
