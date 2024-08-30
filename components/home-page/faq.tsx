@@ -121,8 +121,18 @@ const bidAndPerformanceBond: FAQItem[] = [
     // ... (other questions and answers)
   ];
   
-
-  const FAQCategory = ({ title, items }) => (
+  
+  type FAQCategoryProps = {
+    title: string;
+    items: FAQItem[];
+  };
+  
+  type FAQCategory = {
+    title: string;
+    items: FAQItem[];
+  };
+  
+  const FAQCategory: React.FC<FAQCategoryProps> = ({ title, items }) => (
     <Accordion type="single" collapsible className="w-full">
       <AccordionItem value={title}>
         <AccordionTrigger className="text-left text-lg font-semibold">
@@ -142,7 +152,7 @@ const bidAndPerformanceBond: FAQItem[] = [
                       href={item.link}
                       className="mt-2 flex w-full items-center opacity-60 transition-all hover:opacity-100"
                     >
-                      Learn more <ArrowUpRight className="ml-1" size="16" />
+                      Learn more <ArrowUpRight className="ml-1" size={16} />
                     </a>
                   )}
                 </AccordionContent>
@@ -154,8 +164,8 @@ const bidAndPerformanceBond: FAQItem[] = [
     </Accordion>
   );
   
-  const FAQ = () => {
-    const categories = [
+  const FAQ: React.FC = () => {
+    const categories: FAQCategory[] = [
       { title: "Bid and Performance Bond", items: bidAndPerformanceBond },
       { title: "Commercial Vehicle Coverage", items: commercialVehicleCoverage },
       { title: "General Liability", items: generalLiability },
@@ -180,5 +190,5 @@ const bidAndPerformanceBond: FAQItem[] = [
       </Section>
     );
   };
-
-export default FAQ;
+  
+  export default FAQ;
