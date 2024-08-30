@@ -178,8 +178,7 @@ const bidAndPerformanceBond: FAQItem[] = [
         <Container>
           <h3 className="!mt-0">Frequently Asked Questions</h3>
           <h4 className="text-muted-foreground">
-            Can't find the answer you're looking for? Reach out to our
-            customer support team.
+            Can&apos;t find the answer you&apos;re looking for? Reach out to our customer support team.
           </h4>
           <div className="not-prose mt-4 flex flex-col gap-4 md:mt-8">
             {categories.map((category, index) => (

@@ -33,7 +33,7 @@ export function NavBar() {
                         <SheetHeader>
                             <SheetTitle>Lange & Associates</SheetTitle>
                             <SheetDescription>
-                            Lange and Associates has been "The Contractors' Insurance Specialist" for over 25 years.
+                            Lange and Associates has been &quot;The Contractors&apos; Insurance Specialist&quot; for over 25 years.
                             </SheetDescription>
                         </SheetHeader>
                         <div className="flex flex-col space-y-3 mt-[1rem] z-[99]">

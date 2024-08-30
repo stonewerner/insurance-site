@@ -41,7 +41,7 @@ function Policy() {
 
             <h3 className="text-xl font-semibold mb-2">The Information We Disclose</h3>
             <p className="mb-4">
-              We do not disclose any non-public personal information about our policyholders, except as permitted by law. In some cases, this information can be disclosed to third parties without your authorization. These disclosures may include those made to your insurance company, appraisers, independent adjusters, insurance regulators, and/or your mortgage lender or lien holder. It is the agency's normal procedure that your policy could be re-marketed for the purpose of renewing or replacing it. We do not sell our customer lists.
+              We do not disclose any non-public personal information about our policyholders, except as permitted by law. In some cases, this information can be disclosed to third parties without your authorization. These disclosures may include those made to your insurance company, appraisers, independent adjusters, insurance regulators, and/or your mortgage lender or lien holder. It is the agency&apos;s normal procedure that your policy could be re-marketed for the purpose of renewing or replacing it. We do not sell our customer lists.
             </p>
 
             <h3 className="text-xl font-semibold mb-2">How We Protect Your Personal Information</h3>

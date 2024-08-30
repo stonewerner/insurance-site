@@ -35,7 +35,7 @@ const Hero = () => {
           </h1>
           <h3 className="text-muted-foreground">
             <Balancer>
-              "The Contractors' Insurance Specialist."
+                &quot;The Contractors&apos; Insurance Specialist.&quot;
             </Balancer>
           </h3>
           <div className="not-prose my-8 h-96 w-full overflow-hidden rounded-lg border md:h-[480px] md:rounded-xl">

@@ -24,8 +24,8 @@ export default function Footer() {
               />
             </Link>
             <p>
-              <Balancer>
-                Lange and Associates has been "The Contractors' Insurance Specialist" for over 25 years.
+                <Balancer>
+                    Lange and Associates has been &quot;The Contractors&apos; Insurance Specialist&quot; for over 25 years.
               </Balancer>
             </p>
           </div>
@@ -35,7 +35,7 @@ export default function Footer() {
               <p className="flex items-center gap-2">
                 <Phone size={16} /> (800) 288-9555
               </p>
-              <p className="italic">"The Contractors' Insurance Specialist"</p>
+              <p className="italic">&quot;The Contractors&apos; Insurance Specialist&quot;</p>
               <p>Jonathan Lange, CIC, CRM</p>
             </div>
             <div className="flex flex-col gap-2">
