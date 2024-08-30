@@ -51,11 +51,6 @@ export const testimonials = [
       img: "/vercel.svg",
       nameImg: "/next.svg",
     },
-    {
-      id: 5,
-      name: "docker.",
-      img: "/vercel.svg",
-      nameImg: "/next.svg",
-    },
+    
   ];
   

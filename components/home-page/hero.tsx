@@ -24,20 +24,18 @@ const Hero = () => {
             size={"sm"}
             variant={"outline"}
           >
-            <Link className="not-prose" href="https://9d8.dev">
-              Lorem ipsum dolor sit amet <ArrowRight className="w-4" />
+            <Link className="not-prose" href="#cta">
+              Get a Free Quote <ArrowRight className="w-4" />
             </Link>
           </Button>
           <h1>
             <Balancer>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              Lange & Associates Insurance Agency, Inc.
             </Balancer>
           </h1>
           <h3 className="text-muted-foreground">
             <Balancer>
-              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              "The Contractors' Insurance Specialist."
             </Balancer>
           </h3>
           <div className="not-prose my-8 h-96 w-full overflow-hidden rounded-lg border md:h-[480px] md:rounded-xl">

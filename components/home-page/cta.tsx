@@ -40,13 +40,12 @@ export function CTA() {
   }
 
   return (
-    <Section>
+    <Section id="cta">
       <Container className="flex flex-col items-center gap-6 text-center">
-        <h2 className="!my-0">Lorem ipsum dolor sit amet!</h2>
+        <h2 className="!my-0">Get a Free Quote!</h2>
         <p className="text-lg opacity-70 md:text-2xl">
           <Balancer>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Enter your email here and a member of our team will reach out to discuss your specific needs.
           </Balancer>
         </p>
         <Form {...form}>

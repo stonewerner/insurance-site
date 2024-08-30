@@ -93,8 +93,7 @@ export function NavBar() {
                     <DropdownMenu>
                         <DropdownMenuTrigger><Button variant="ghost">Privacy & Refunds</Button></DropdownMenuTrigger>
                         <DropdownMenuContent>
-                            <DropdownMenuItem>Privacy Policy</DropdownMenuItem>
-                            <DropdownMenuItem>Refund Policy</DropdownMenuItem>
+                            <DropdownMenuItem><Link href="/policy">Policy Page</Link></DropdownMenuItem>
                             {/*privacy and refund could be in the footer*/}
                             <DropdownMenuItem>Glossary</DropdownMenuItem>
                         </DropdownMenuContent>
