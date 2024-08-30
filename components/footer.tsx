@@ -35,8 +35,7 @@ export default function Footer() {
             </Link>
             <p>
               <Balancer>
-                brijr/components is a collection of Next.js, React, Typescript
-                components for building landing pages and websites.
+                Lange and Associates has been "The Contractors' Insurance Specialist" for over 25 years.
               </Balancer>
             </p>
           </div>
@@ -60,7 +59,7 @@ export default function Footer() {
           </div>
           <p className="text-muted-foreground">
             ©{" "}
-            <a href="https://github.com/brijr/components">brijr/components</a>.
+            <a href="/">Lange & Associates</a>.
             All rights reserved. 2024-present.
           </p>
         </Container>

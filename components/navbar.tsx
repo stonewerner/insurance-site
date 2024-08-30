@@ -9,6 +9,15 @@ import { NavigationMenu, NavigationMenuLink, NavigationMenuList } from "./ui/nav
 // import ModeToggle from "../mode-toggle"
 import { SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet"
 //import ModeToggle from "./mode-toggle"
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuLabel,
+    DropdownMenuSeparator,
+    DropdownMenuTrigger,
+  } from "@/components/ui/dropdown-menu"
+  
 
 
 export function NavBar() {
@@ -16,67 +25,55 @@ export function NavBar() {
     return (
         <div className="flex items-center min-w-full w-full fixed justify-center p-2 z-[50] mt-[2rem]">
             <div className="flex justify-between md:w-[720px] w-[95%] border dark:border-zinc-900 dark:bg-black bg-opacity-10 relative backdrop-filter backdrop-blur-lg bg-white border-white border-opacity-20 rounded-xl p-2 shadow-lg">
-                <Dialog>
-                    <SheetTrigger className="min-[825px]:hidden p-2 transition">
-                        <MenuIcon />
-                    </SheetTrigger>
-                    <SheetContent side="left">
-                        <SheetHeader>
-                            <SheetTitle>fabrika.</SheetTitle>
-                            <SheetDescription>
-                                Scale and launch products with expert developers, on-demand, at a flat monthly fee
-                            </SheetDescription>
-                        </SheetHeader>
-                        <div className="flex flex-col space-y-3 mt-[1rem] z-[99]">
-                            <DialogClose asChild>
-                                <Link href="/">
-                                    <Button variant="outline" className="w-full">Home</Button>
-                                </Link>
-                            </DialogClose>
-                            <DialogClose asChild>
-                                <Link href="/software">
-                                    <Button variant="outline" className="w-full">Software</Button>
-                                </Link>
-                            </DialogClose>
-                            <DialogClose asChild>
-                                <Link href="/automation">
-                                    <Button variant="outline" className="w-full">Automation</Button>
-                                </Link>
-                            </DialogClose>
-                            <DialogClose asChild>
-                                <Link href="/blog">
-                                    <Button variant="outline" className="w-full">Blog</Button>
-                                </Link>
-                            </DialogClose>
-                            <DialogClose asChild>
-                                <Link href="/projects">
-                                    <Button variant="outline" className="w-full">Projects</Button>
-                                </Link>
-                            </DialogClose>
-                            {/*<ModeToggle />*/}
-                        </div>
-                    </SheetContent>
-                </Dialog>
                 <NavigationMenu>
                     <NavigationMenuList className="max-[825px]:hidden ">
                         <Link href="/" className="pl-2">
-                            <h1 className="font-bold">fabrika.</h1>
+                            <h1 className="font-bold">Lange & Associates</h1>
                         </Link>
                     </NavigationMenuList>
                 </NavigationMenu>
                 <div className="flex items-center gap-2 max-[825px]:hidden">
-                    <Link href="/software">
-                        <Button variant="ghost">Software</Button>
-                    </Link>
-                    <Link href="/automation">
-                        <Button variant="ghost">Automation</Button>
-                    </Link>
-                    <Link href="/blog">
-                        <Button variant="ghost">Blog</Button>
-                    </Link>
-                    <Link href="/projects">
-                        <Button variant="ghost">Projects</Button>
-                    </Link>
+                <DropdownMenu>
+                        <DropdownMenuTrigger><Button variant="ghost">About Us</Button></DropdownMenuTrigger>
+                        <DropdownMenuContent>
+                            <DropdownMenuItem>Company Story</DropdownMenuItem>
+                            <DropdownMenuItem>Mission Statement</DropdownMenuItem>
+                        </DropdownMenuContent>
+                    </DropdownMenu>
+                    <DropdownMenu>
+                        <DropdownMenuTrigger><Button variant="ghost">Applications</Button></DropdownMenuTrigger>
+                        <DropdownMenuContent>
+                            <DropdownMenuItem>first</DropdownMenuItem>
+                            <DropdownMenuItem>second</DropdownMenuItem>
+                            <DropdownMenuItem>third</DropdownMenuItem>
+                            <DropdownMenuItem>fourth</DropdownMenuItem>
+                            <DropdownMenuItem>fifth</DropdownMenuItem>
+                            <DropdownMenuItem>sixth</DropdownMenuItem>
+                            <DropdownMenuItem>seventh</DropdownMenuItem>
+                            <DropdownMenuItem>eighth</DropdownMenuItem>
+                            <DropdownMenuItem>ninth</DropdownMenuItem>
+                            <DropdownMenuItem>tenth</DropdownMenuItem>
+                        </DropdownMenuContent>
+                    </DropdownMenu>
+                    <DropdownMenu>
+                        <DropdownMenuTrigger><Button variant="ghost">Online Services</Button></DropdownMenuTrigger>
+                        <DropdownMenuContent>
+                            <DropdownMenuItem>first</DropdownMenuItem>
+                            <DropdownMenuItem>second</DropdownMenuItem>
+                            <DropdownMenuItem>third</DropdownMenuItem>
+                            <DropdownMenuItem>fourth</DropdownMenuItem>
+                            <DropdownMenuItem>fifth</DropdownMenuItem>
+                        </DropdownMenuContent>
+                    </DropdownMenu>
+                    <DropdownMenu>
+                        <DropdownMenuTrigger><Button variant="ghost">Privacy & Refunds</Button></DropdownMenuTrigger>
+                        <DropdownMenuContent>
+                            <DropdownMenuItem>Privacy Policy</DropdownMenuItem>
+                            <DropdownMenuItem>Refund Policy</DropdownMenuItem>
+                            <DropdownMenuItem>FAQs</DropdownMenuItem> {/*use brijr faq component, privacy and refund could be in the footer*/}
+                            <DropdownMenuItem>Glossary</DropdownMenuItem>
+                        </DropdownMenuContent>
+                    </DropdownMenu>
                     {/*<ModeToggle />*/}
                 </div>
             </div>
