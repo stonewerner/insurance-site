@@ -112,7 +112,7 @@ export function NavBar() {
                         <DropdownMenuContent>
                             <DropdownMenuItem>Privacy Policy</DropdownMenuItem>
                             <DropdownMenuItem>Refund Policy</DropdownMenuItem>
-                            <DropdownMenuItem>FAQs</DropdownMenuItem> {/*use brijr faq component, privacy and refund could be in the footer*/}
+                            {/*privacy and refund could be in the footer*/}
                             <DropdownMenuItem>Glossary</DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>

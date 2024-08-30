@@ -15,30 +15,6 @@ type FAQItem = {
   link?: string;
 };
 
-const content: FAQItem[] = [
-  {
-    question: "Lorem ipsum dolor sit amet?",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    link: "https://google.com",
-  },
-  {
-    question: "Ut enim ad minim veniam?",
-    answer:
-      "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-  },
-  {
-    question: "Duis aute irure dolor in reprehenderit?",
-    answer:
-      "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-  },
-  {
-    question: "Excepteur sint occaecat cupidatat non proident?",
-    answer:
-      "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-  },
-];
-
 const bidAndPerformanceBond: FAQItem[] = [
     {
       question: "How do I get a Bid and Performance Bond?",
@@ -145,26 +121,16 @@ const bidAndPerformanceBond: FAQItem[] = [
     // ... (other questions and answers)
   ];
   
-  const allFAQs = [
-    ...bidAndPerformanceBond,
-    ...commercialVehicleCoverage,
-    ...generalLiability,
-    ...licenseBond,
-    ...workersCompensation,
-  ];
 
-const FAQ = () => {
-  return (
-    <Section>
-      <Container>
-        <h3 className="!mt-0">Frequently Asked Questions</h3>
-        <h4 className="text-muted-foreground">
-          Can&apos;t find the answer you&apos;re looking for? Reach out to our
-          customer support team.
-        </h4>
-        <div className="not-prose mt-4 flex flex-col gap-4 md:mt-8">
-          {content.map((item, index) => (
-            <Accordion key={index} type="single" collapsible>
+  const FAQCategory = ({ title, items }) => (
+    <Accordion type="single" collapsible className="w-full">
+      <AccordionItem value={title}>
+        <AccordionTrigger className="text-left text-lg font-semibold">
+          {title}
+        </AccordionTrigger>
+        <AccordionContent>
+          {items.map((item, index) => (
+            <Accordion key={index} type="single" collapsible className="mt-2">
               <AccordionItem value={item.question}>
                 <AccordionTrigger className="text-left">
                   {item.question}
@@ -183,10 +149,36 @@ const FAQ = () => {
               </AccordionItem>
             </Accordion>
           ))}
-        </div>
-      </Container>
-    </Section>
+        </AccordionContent>
+      </AccordionItem>
+    </Accordion>
   );
-};
+  
+  const FAQ = () => {
+    const categories = [
+      { title: "Bid and Performance Bond", items: bidAndPerformanceBond },
+      { title: "Commercial Vehicle Coverage", items: commercialVehicleCoverage },
+      { title: "General Liability", items: generalLiability },
+      { title: "License Bond", items: licenseBond },
+      { title: "Workers Compensation", items: workersCompensation },
+    ];
+  
+    return (
+      <Section>
+        <Container>
+          <h3 className="!mt-0">Frequently Asked Questions</h3>
+          <h4 className="text-muted-foreground">
+            Can't find the answer you're looking for? Reach out to our
+            customer support team.
+          </h4>
+          <div className="not-prose mt-4 flex flex-col gap-4 md:mt-8">
+            {categories.map((category, index) => (
+              <FAQCategory key={index} title={category.title} items={category.items} />
+            ))}
+          </div>
+        </Container>
+      </Section>
+    );
+  };
 
 export default FAQ;
