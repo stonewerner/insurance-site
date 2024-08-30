@@ -40,7 +40,6 @@ export function NavBar() {
                             <DialogClose asChild>
                                 <Link href="/">
                                     <Button variant="outline" className="w-full">Home</Button>
-                                    {/*TODO: make these dropdowns as well*/}
                                 </Link>
                             </DialogClose>
                             <DialogClose asChild>
@@ -48,22 +47,6 @@ export function NavBar() {
                                     <Button variant="outline" className="w-full">Contact Us</Button>
                                 </Link>
                             </DialogClose>
-                            <DialogClose asChild>
-                                <Link href="/automation">
-                                    <Button variant="outline" className="w-full">Applications</Button>
-                                </Link>
-                            </DialogClose>
-                            <DialogClose asChild>
-                                <Link href="/blog">
-                                    <Button variant="outline" className="w-full">Online Services</Button>
-                                </Link>
-                            </DialogClose>
-                            <DialogClose asChild>
-                                <Link href="/projects">
-                                    <Button variant="outline" className="w-full">Privacy & Refunds</Button>
-                                </Link>
-                            </DialogClose>
-                            
                         </div>
                     </SheetContent>
                 </Dialog>
