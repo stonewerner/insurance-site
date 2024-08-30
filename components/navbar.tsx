@@ -31,35 +31,36 @@ export function NavBar() {
                     </SheetTrigger>
                     <SheetContent side="left">
                         <SheetHeader>
-                            <SheetTitle>fabrika.</SheetTitle>
+                            <SheetTitle>Lange & Associates</SheetTitle>
                             <SheetDescription>
-                                Scale and launch products with expert developers, on-demand, at a flat monthly fee
+                            Lange and Associates has been "The Contractors' Insurance Specialist" for over 25 years.
                             </SheetDescription>
                         </SheetHeader>
                         <div className="flex flex-col space-y-3 mt-[1rem] z-[99]">
                             <DialogClose asChild>
                                 <Link href="/">
                                     <Button variant="outline" className="w-full">Home</Button>
+                                    {/*TODO: make these dropdowns as well*/}
                                 </Link>
                             </DialogClose>
                             <DialogClose asChild>
                                 <Link href="/software">
-                                    <Button variant="outline" className="w-full">Software</Button>
+                                    <Button variant="outline" className="w-full">About Us</Button>
                                 </Link>
                             </DialogClose>
                             <DialogClose asChild>
                                 <Link href="/automation">
-                                    <Button variant="outline" className="w-full">Automation</Button>
+                                    <Button variant="outline" className="w-full">Applications</Button>
                                 </Link>
                             </DialogClose>
                             <DialogClose asChild>
                                 <Link href="/blog">
-                                    <Button variant="outline" className="w-full">Blog</Button>
+                                    <Button variant="outline" className="w-full">Online Services</Button>
                                 </Link>
                             </DialogClose>
                             <DialogClose asChild>
                                 <Link href="/projects">
-                                    <Button variant="outline" className="w-full">Projects</Button>
+                                    <Button variant="outline" className="w-full">Privacy & Refunds</Button>
                                 </Link>
                             </DialogClose>
                             

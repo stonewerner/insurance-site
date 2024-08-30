@@ -1,3 +1,4 @@
+import Clients from '@/components/clients';
 import { Container, Main, Section } from '@/components/craft'
 import CTA from '@/components/home-page/cta';
 import FeatureLeft from '@/components/home-page/feature-left';
@@ -12,6 +13,7 @@ export default function Page() {
       <Section>
         <Container>
           <Hero />
+          <Clients />
           <FeatureLeft />
           <FeatureRight />
           <CTA />
