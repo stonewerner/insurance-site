@@ -7,12 +7,14 @@ import Balancer from "react-wrap-balancer";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, Container } from "@/components/craft";
-import Placeholder from "@/public/business-stock.png";
+import Placeholder1 from "@/public/business-stock.png";
+import Placeholder2 from "@/public/insurance-stock.jpg";
+import Placeholder3 from "@/public/office.jpg";
 import Slide from '@mui/material/Slide';
 
 export default function Hero2() {
   const [activeStep, setActiveStep] = useState(0);
-  const images = [Placeholder, Placeholder, Placeholder]; // Replace with actual different images later
+  const images = [Placeholder1, Placeholder2, Placeholder3]; // Replace with actual different images later
 
   useEffect(() => {
     const timer = setInterval(() => {
