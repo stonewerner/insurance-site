@@ -44,7 +44,7 @@ export function CompanyCards({
 
   useEffect(() => {
     addAnimation();
-  }, []);
+  },);
 
   const getDirection = () => {
     if (containerRef.current) {
