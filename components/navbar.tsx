@@ -58,13 +58,9 @@ export function NavBar() {
                     </NavigationMenuList>
                 </NavigationMenu>
                 <div className="flex items-center gap-2 max-[825px]:hidden">
-                <DropdownMenu>
-                        <DropdownMenuTrigger><Button variant="ghost">About Us</Button></DropdownMenuTrigger>
-                        <DropdownMenuContent>
-                            <DropdownMenuItem>Company Story</DropdownMenuItem>
-                            <DropdownMenuItem>Mission Statement</DropdownMenuItem>
-                        </DropdownMenuContent>
-                    </DropdownMenu>
+                    <Link href="/about">
+                        <Button variant="ghost">About Us</Button>
+                    </Link>
                     <DropdownMenu>
                         <DropdownMenuTrigger><Button variant="ghost">Applications</Button></DropdownMenuTrigger>
                         <DropdownMenuContent>
