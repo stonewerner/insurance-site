@@ -55,10 +55,10 @@ export function NavBar() {
                     <NavigationMenuList className="max-[825px]:hidden ">
                         <Link href="/" className="pl-2">
                         <Image
-                            src="/lange-logo.png"  // or .png if using PNG
+                            src="/lange-logo-trans.png"
                             alt="Lange & Associates"
-                            width={350}  // Adjust as needed
-                            height={63}  // Adjust as needed
+                            width={350}  
+                            height={63}  
                             priority
                             />
                         </Link>
