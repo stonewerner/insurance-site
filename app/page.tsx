@@ -2,10 +2,10 @@ import Clients from '@/components/clients';
 import { Container, Main, Section } from '@/components/craft'
 import CTA from '@/components/home-page/cta';
 import FAQ from '@/components/home-page/faq';
-import FeatureLeft from '@/components/home-page/feature-left';
-import FeatureRight from '@/components/home-page/feature-right';
+import FeatureDouble from '@/components/home-page/feature-double';
 import Hero from '@/components/home-page/hero';
 import React from 'react'
+import CompanyWrapper from '@/components/ui/company-wrapper';
 
 
 export default function Page() {
@@ -14,9 +14,8 @@ export default function Page() {
       <Section>
         <Container>
           <Hero />
-          <Clients />
-          <FeatureLeft />
-          <FeatureRight />
+          <CompanyWrapper />
+          <FeatureDouble />
           <FAQ />
           <CTA />
         </Container>

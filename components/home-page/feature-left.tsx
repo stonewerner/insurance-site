@@ -21,10 +21,11 @@ const FeatureLeft = () => {
           />
         </div>
         <div className="flex flex-col gap-6 py-8">
-          <h3 className="!my-0">Lorem ipsum dolor sit</h3>
+          <h3 className="!my-0">Gary Erdossy</h3>
+          <h4 className="!my-0">CEO, Nexus Residential</h4>
           <p className="font-light leading-[1.4] opacity-70">
-            Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua.
+          "In spite of a strong relationship with our former broker, I gave Lange & Associates a chance to quote my condo wrap policy and it was one of the best decisions I ever made! I saved over $750,000 on a project specific policy. With Lange & Associates, my insurance costs will never be a deal breaker again. Thanks, Jonathan!",
+
           </p>
           <div className="not-prose flex items-center gap-2">
             <Button className="w-fit" asChild>

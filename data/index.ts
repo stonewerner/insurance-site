@@ -25,8 +25,14 @@ export const testimonials = [
         title: "CEO, Nexus Residential",
       },
   ];
-  
+
   export const companies = [
+    { id: 1, name: "Company A", logo: "/vercel.svg" },
+    { id: 2, name: "Company B", logo: "/next.svg" },
+    // ... more companies
+  ];
+  
+  export const companiesOld = [
     {
       id: 1,
       name: "cloudinary",
