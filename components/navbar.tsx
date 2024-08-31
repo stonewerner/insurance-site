@@ -17,6 +17,7 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu"
+import Image from "next/image"
   
 
 
@@ -53,7 +54,13 @@ export function NavBar() {
                 <NavigationMenu>
                     <NavigationMenuList className="max-[825px]:hidden ">
                         <Link href="/" className="pl-2">
-                            <h1 className="font-bold">Lange & Associates</h1>
+                        <Image
+                            src="/lange-logo-trans.png"
+                            alt="Lange & Associates"
+                            width={350}  
+                            height={63}  
+                            priority
+                            />
                         </Link>
                     </NavigationMenuList>
                 </NavigationMenu>
@@ -61,21 +68,9 @@ export function NavBar() {
                     <Link href="/about">
                         <Button variant="ghost">About Us</Button>
                     </Link>
-                    <DropdownMenu>
-                        <DropdownMenuTrigger><Button variant="ghost">Applications</Button></DropdownMenuTrigger>
-                        <DropdownMenuContent>
-                            <DropdownMenuItem>first</DropdownMenuItem>
-                            <DropdownMenuItem>second</DropdownMenuItem>
-                            <DropdownMenuItem>third</DropdownMenuItem>
-                            <DropdownMenuItem>fourth</DropdownMenuItem>
-                            <DropdownMenuItem>fifth</DropdownMenuItem>
-                            <DropdownMenuItem>sixth</DropdownMenuItem>
-                            <DropdownMenuItem>seventh</DropdownMenuItem>
-                            <DropdownMenuItem>eighth</DropdownMenuItem>
-                            <DropdownMenuItem>ninth</DropdownMenuItem>
-                            <DropdownMenuItem>tenth</DropdownMenuItem>
-                        </DropdownMenuContent>
-                    </DropdownMenu>
+                    <Link href="/applications">
+                        <Button variant="ghost">Applications</Button>
+                    </Link>
                     <DropdownMenu>
                         <DropdownMenuTrigger><Button variant="ghost">Online Services</Button></DropdownMenuTrigger>
                         <DropdownMenuContent>
