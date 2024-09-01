@@ -1,8 +1,18 @@
 import React from 'react';
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import { UseFormReturn } from "react-hook-form";
+import { z } from "zod";
 
-export default function ExperienceAndWork({ form }) {
+import { formSchema } from '../page';
+
+type FormValues = z.infer<typeof formSchema>;
+
+interface ExperienceAndWorkProps {
+  form: UseFormReturn<FormValues>;
+}
+
+export default function ExperienceAndWork({ form }: ExperienceAndWorkProps) {
   return (
     <div>
       <h2 className="text-2xl font-semibold mb-4">5. Experience and Work</h2>

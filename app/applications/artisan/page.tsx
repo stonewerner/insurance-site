@@ -19,7 +19,7 @@ import ProjectInformation from './FormSections/ProjectInformation';
 import AdditionalQuestions from './FormSections/AdditionalQuestions';
 
 
-import { jobClasses } from './jobClasses';
+import { jobClasses, states } from './formData';
 
 // Define the form schema for all the components
 export const formSchema = z.object({
@@ -60,6 +60,50 @@ export const formSchema = z.object({
   coverageLimits: z.enum(['300000', '500000', '1000000', '2000000', 'other']),
   specialCoverages: z.enum(['yes', 'no']),
   specialCoveragesDescription: z.string().optional(),
+  // Experience and Work:
+  yearsExperienceContracting: z.number().min(0),
+  yearsExperienceEntity: z.number().min(0),
+  workPercentage: z.object({
+    residential: z.number().min(0).max(100),
+    industrial: z.number().min(0).max(100),
+    commercial: z.number().min(0).max(100),
+    newConstruction: z.number().min(0).max(100),
+    structuralRemodel: z.number().min(0).max(100),
+    nonStructuralRemodel: z.number().min(0).max(100),
+  }),
+  workRole: z.object({
+    generalContractor: z.number().min(0).max(100),
+    subcontractor: z.number().min(0).max(100),
+    constructionManager: z.number().min(0).max(100),
+  }),
+  // Project Information:
+  operatingStates: z.enum(states),
+  otherOperatingStates: z.string().optional(),
+  largeProject1: z.string(),
+  largeProject2: z.string(),
+  pastLargeProject1: z.string(),
+  pastLargeProject2: z.string(),
+  averageJobValue: z.number().min(0),
+  newHomesNextYear: z.number().min(0),
+  maxNewHomesInYear: z.number().min(0),
+  // Additional Information:
+  workInvolvingCondos: z.enum(['yes', 'no']),
+  workInvolvingApartments: z.enum(['yes', 'no']),
+  workInvolvingLargeProjects: z.enum(['yes', 'no']),
+  newConstructionFromGround: z.enum(['yes', 'no']),
+  newConstructionDetails: z.string().optional(),
+  heavyStructuralEngineering: z.enum(['yes', 'no']),
+  heavyStructuralEngineeringDescription: z.string().optional(),
+  retainingWallHeight: z.number().min(0).optional(),
+  roofWork: z.enum(['yes', 'no']),
+  roofWorkDescription: z.string().optional(),
+  hotTarPercentage: z.number().min(0).max(100),
+  torchPercentage: z.number().min(0).max(100),
+  totalPercentage: z.number().min(0).max(100),
+  constructionManager: z.enum(['yes', 'no']),
+  claimsHistory: z.enum(['yes', 'no']),
+  claimsDetails: z.string().optional(),
+  additionalComments: z.string().optional(),
   
 });
 
@@ -104,7 +148,49 @@ export default function ArtisanGeneralLiabilityForm() {
       coverageLimits: '1000000',
       specialCoverages: 'no',
       specialCoveragesDescription: '',
-      
+      // Experience and Work
+      yearsExperienceContracting: 0,
+      yearsExperienceEntity: 0,
+      workPercentage: {
+        residential: 0,
+        industrial: 0,
+        commercial: 0,
+        newConstruction: 0,
+        structuralRemodel: 0,
+        nonStructuralRemodel: 0,
+      },
+      workRole: {
+        generalContractor: 0,
+        subcontractor: 0,
+        constructionManager: 0,
+      },
+      // Project Information
+      operatingStates: states[0],
+      otherOperatingStates: '',
+      largeProject1: '',
+      largeProject2: '',
+      pastLargeProject1: '',
+      pastLargeProject2: '',
+      averageJobValue: 0,
+      newHomesNextYear: 0,
+      maxNewHomesInYear: 0,
+      // Additional Information
+      workInvolvingCondos: 'no',
+      workInvolvingApartments: 'no',
+      workInvolvingLargeProjects: 'no',
+      newConstructionFromGround: 'no',
+      newConstructionDetails: '',
+      heavyStructuralEngineering: 'no',
+      heavyStructuralEngineeringDescription: '',
+      retainingWallHeight: 0,
+      roofWork: 'no',
+      roofWorkDescription: '',
+      hotTarPercentage: 0,
+      torchPercentage: 0,
+      constructionManager: 'no',
+      claimsHistory: 'no',
+      claimsDetails: '',
+      additionalComments: '',      
   }});
 
   function onSubmit(values: z.infer<typeof formSchema>) {

@@ -6,7 +6,7 @@ import { UseFormReturn } from "react-hook-form";
 import { z } from "zod";
 
 import { formSchema } from '../page';
-import { jobClasses } from '../jobClasses';
+import { jobClasses } from '../formData';
 
 type FormValues = z.infer<typeof formSchema>;
 

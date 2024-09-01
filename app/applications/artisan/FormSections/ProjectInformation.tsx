@@ -3,10 +3,20 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { UseFormReturn } from "react-hook-form";
+import { z } from "zod";
 
-const states = ["AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC", "DE", "FL", "GA", "HI", "IA", "ID", "IL", "IN", "KS", "KY", "LA", "MA", "MD", "ME", "MI", "MN", "MO", "MS", "MT", "NC", "ND", "NE", "NH", "NJ", "NM", "NV", "NY", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY"];
+import { formSchema } from '../page';
+import { states } from '../formData';
 
-export default function ProjectInformation({ form }) {
+type FormValues = z.infer<typeof formSchema>;
+
+interface ProjectInformationProps {
+  form: UseFormReturn<FormValues>;
+}
+
+
+export default function ProjectInformation({ form }: ProjectInformationProps) {
   return (
     <div>
       <h2 className="text-2xl font-semibold mb-4">Project Information</h2>

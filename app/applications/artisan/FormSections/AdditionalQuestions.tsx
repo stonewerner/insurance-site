@@ -3,8 +3,18 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
+import { UseFormReturn } from "react-hook-form";
+import { z } from "zod";
 
-export default function AdditionalQuestions({ form }) {
+import { formSchema } from '../page';
+
+type FormValues = z.infer<typeof formSchema>;
+
+interface AdditionalQuestionsProps {
+  form: UseFormReturn<FormValues>;
+}
+
+export default function AdditionalQuestions({ form }: AdditionalQuestionsProps) {
   return (
     <div>
       <h2 className="text-2xl font-semibold mb-4">Additional Questions</h2>
