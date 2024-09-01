@@ -24,7 +24,7 @@ export default function Hero2() {
     return () => {
       clearInterval(timer);
     };
-  }, []);
+  });
 
   return (
     <Section>

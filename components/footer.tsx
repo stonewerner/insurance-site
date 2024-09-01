@@ -5,7 +5,7 @@ import Balancer from "react-wrap-balancer";
 import { Button } from "./ui/button";
 import { Github, Twitter, Facebook, Phone, MapPin } from "lucide-react";
 import { Section, Container } from "./craft";
-import Logo from "@/public/next.svg";
+import Logo from "@/public/lange-logo-trans.png";
 
 export default function Footer() {
   return (
@@ -18,8 +18,8 @@ export default function Footer() {
               <Image
                 src={Logo}
                 alt="Logo"
-                width={120}
-                height={27.27}
+                width={350}
+                height={63}
                 className="transition-all hover:opacity-75 dark:invert"
               />
             </Link>
@@ -62,6 +62,7 @@ export default function Footer() {
           </div>
           <div className="mb-4 flex flex-col gap-4 md:mb-0 md:flex-row">
             <Link href="/policy">Policy Page</Link>
+            <Link href="/glossary">Glossary</Link>
           </div>
         </Container>
         <Container className="not-prose flex flex-col justify-between gap-6 border-t md:flex-row md:items-center md:gap-2">

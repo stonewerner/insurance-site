@@ -44,6 +44,25 @@ export function NavBar() {
                                 </Link>
                             </DialogClose>
                             <DialogClose asChild>
+                                <Link href="/about">
+                                    <Button variant="outline" className="w-full">About Us</Button>
+                                </Link>
+                            </DialogClose>
+                            <DialogClose asChild>
+                                <Link href="/applications">
+                                    <Button variant="outline" className="w-full">Applications</Button>
+                                </Link>
+                            </DialogClose>
+                            <DialogClose asChild>
+                                <Link href="/services">
+                                    <Button variant="outline" className="w-full">Online Services</Button>
+                                </Link>
+                            </DialogClose><DialogClose asChild>
+                                <Link href="/policy">
+                                    <Button variant="outline" className="w-full">Privacy & Refunds</Button>
+                                </Link>
+                            </DialogClose>
+                            <DialogClose asChild>
                                 <Link href="#footer">
                                     <Button variant="outline" className="w-full">Contact Us</Button>
                                 </Link>
@@ -71,24 +90,12 @@ export function NavBar() {
                     <Link href="/applications">
                         <Button variant="ghost">Applications</Button>
                     </Link>
-                    <DropdownMenu>
-                        <DropdownMenuTrigger><Button variant="ghost">Online Services</Button></DropdownMenuTrigger>
-                        <DropdownMenuContent>
-                            <DropdownMenuItem>first</DropdownMenuItem>
-                            <DropdownMenuItem>second</DropdownMenuItem>
-                            <DropdownMenuItem>third</DropdownMenuItem>
-                            <DropdownMenuItem>fourth</DropdownMenuItem>
-                            <DropdownMenuItem>fifth</DropdownMenuItem>
-                        </DropdownMenuContent>
-                    </DropdownMenu>
-                    <DropdownMenu>
-                        <DropdownMenuTrigger><Button variant="ghost">Privacy & Refunds</Button></DropdownMenuTrigger>
-                        <DropdownMenuContent>
-                            <DropdownMenuItem><Link href="/policy">Policy Page</Link></DropdownMenuItem>
-                            {/*privacy and refund could be in the footer*/}
-                            <DropdownMenuItem>Glossary</DropdownMenuItem>
-                        </DropdownMenuContent>
-                    </DropdownMenu>
+                    <Link href="/services">
+                        <Button variant="ghost">Online Services</Button>
+                    </Link>
+                    <Link href="/policy">
+                        <Button variant="ghost">Privacy & Refunds</Button>
+                    </Link>
                 </div>
             </div>
         </div>
