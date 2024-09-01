@@ -27,10 +27,10 @@ export const testimonials = [
   ];
 
   export const companies = [
-    { id: 1, name: "Company A", logo: "/vercel.svg" },
-    { id: 2, name: "Company B", logo: "/next.svg" },
-    { id: 3, name: "Chubb", logo: "/chubb.svg" },
-    { id: 4, name: "Liberty Mutual", logo: "/liberty-mutual.svg" },
+    { id: 1, name: "Vercel", logo: "/vercel.svg" },
+    { id: 2, name: "Chubb", logo: "/chubb.svg" },
+    { id: 3, name: "Liberty Mutual", logo: "/liberty-mutual.svg" },
+    { id: 4, name: "Next JS", logo: "/next.svg" },
     { id: 5, name: "Zurich", logo: "/zurich.svg" },
     // ... more companies
   ];

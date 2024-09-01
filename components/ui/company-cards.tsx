@@ -44,7 +44,7 @@ export function CompanyCards({
 
   useEffect(() => {
     addAnimation();
-  },);
+  }, []);
 
   const getDirection = () => {
     if (containerRef.current) {
@@ -92,16 +92,18 @@ export function CompanyCards({
       >
         {items.map((item, idx) => (
           <li
-            className="w-[150px] flex-shrink-0 rounded-lg bg-white p-4 flex flex-col items-center justify-center"
+            className="w-[150px] flex-shrink-0 rounded-lg bg-white p-4 flex flex-col items-center justify-between"
             key={idx}
           >
-            <Image 
-              src={item.logo} 
-              alt={`${item.name} logo`} 
-              width={100} 
-              height={100}
-              className="w-full h-auto object-contain"
-            />
+            <div className="h-[100px] flex items-center justify-center">
+              <Image 
+                src={item.logo} 
+                alt={`${item.name} logo`} 
+                width={100} 
+                height={100}
+                className="max-w-full max-h-full object-contain"
+              />
+            </div>
             <span className="mt-2 text-sm font-medium text-gray-800 text-center">
               {item.name}
             </span>
@@ -110,4 +112,4 @@ export function CompanyCards({
       </ul>
     </div>
   );
-};
+}
