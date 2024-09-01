@@ -14,6 +14,11 @@ export const states = ["AK",
 "NJ", "NM", "NV", "NY", "OH", "OK", "OR", "PA", "RI", "SC", 
 "SD", "TN", "TX", "UT", "VA", "VT", "WA", "WI", "WV", "WY"] as const;
 
+// How to parse Number from user input:
+// z.string().transform((val) => Number(val)),
+// instead of z.number().min(0).max(100),
+
+
 // Define the form schema for all the components
 export const formSchema = z.object({
   // General Information:
@@ -38,11 +43,11 @@ export const formSchema = z.object({
   }),
   // Payroll Information:
   jobClass: z.enum(jobClasses),
-  expectedAnnualPayroll: z.number().min(0),
-  hourlyWage: z.number().min(0),
+  expectedAnnualPayroll: z.string().transform((val) => Number(val)),
+  hourlyWage: z.string().transform((val) => Number(val)),
   grossReceipts: z.object({
-    next12Months: z.number().min(0),
-    last12Months: z.number().min(0),
+    next12Months: z.string().transform((val) => Number(val)),
+    last12Months: z.string().transform((val) => Number(val)),
   }),
   // Operations Description:
   operationsDescription: z.string(),
@@ -54,20 +59,20 @@ export const formSchema = z.object({
   specialCoverages: z.enum(['yes', 'no']),
   specialCoveragesDescription: z.string().optional(),
   // Experience and Work:
-  yearsExperienceContracting: z.number().min(0),
-  yearsExperienceEntity: z.number().min(0),
+  yearsExperienceContracting: z.string().transform((val) => Number(val)),
+  yearsExperienceEntity: z.string().transform((val) => Number(val)),
   workPercentage: z.object({
-    residential: z.number().min(0).max(100),
-    industrial: z.number().min(0).max(100),
-    commercial: z.number().min(0).max(100),
-    newConstruction: z.number().min(0).max(100),
-    structuralRemodel: z.number().min(0).max(100),
-    nonStructuralRemodel: z.number().min(0).max(100),
+    residential: z.string().transform((val) => Number(val)),
+    industrial: z.string().transform((val) => Number(val)),
+    commercial: z.string().transform((val) => Number(val)),
+    newConstruction: z.string().transform((val) => Number(val)),
+    structuralRemodel: z.string().transform((val) => Number(val)),
+    nonStructuralRemodel: z.string().transform((val) => Number(val)),
   }),
   workRole: z.object({
-    generalContractor: z.number().min(0).max(100),
-    subcontractor: z.number().min(0).max(100),
-    constructionManager: z.number().min(0).max(100),
+    generalContractor: z.string().transform((val) => Number(val)),
+    subcontractor: z.string().transform((val) => Number(val)),
+    constructionManager: z.string().transform((val) => Number(val)),
   }),
   // Project Information:
   operatingStates: z.enum(states),
@@ -76,9 +81,9 @@ export const formSchema = z.object({
   largeProject2: z.string(),
   pastLargeProject1: z.string(),
   pastLargeProject2: z.string(),
-  averageJobValue: z.number().min(0),
-  newHomesNextYear: z.number().min(0),
-  maxNewHomesInYear: z.number().min(0),
+  averageJobValue: z.string().transform((val) => Number(val)),
+  newHomesNextYear: z.string().transform((val) => Number(val)),
+  maxNewHomesInYear: z.string().transform((val) => Number(val)),
   // Additional Information:
   workInvolvingCondos: z.enum(['yes', 'no']),
   workInvolvingApartments: z.enum(['yes', 'no']),
@@ -87,12 +92,12 @@ export const formSchema = z.object({
   newConstructionDetails: z.string().optional(),
   heavyStructuralEngineering: z.enum(['yes', 'no']),
   heavyStructuralEngineeringDescription: z.string().optional(),
-  retainingWallHeight: z.number().min(0).optional(),
+  retainingWallHeight: z.string().transform((val) => Number(val)),
   roofWork: z.enum(['yes', 'no']),
   roofWorkDescription: z.string().optional(),
-  hotTarPercentage: z.number().min(0).max(100),
-  torchPercentage: z.number().min(0).max(100),
-  totalPercentage: z.number().min(0).max(100),
+  hotTarPercentage: z.string().transform((val) => Number(val)),
+  torchPercentage: z.string().transform((val) => Number(val)),
+  totalPercentage: z.string().transform((val) => Number(val)),
   constructionManager: z.enum(['yes', 'no']),
   claimsHistory: z.enum(['yes', 'no']),
   claimsDetails: z.string().optional(),
