@@ -59,7 +59,7 @@ export function NavBar() {
                                 </Link>
                             </DialogClose><DialogClose asChild>
                                 <Link href="/policy">
-                                    <Button variant="outline" className="w-full">Policy Page</Button>
+                                    <Button variant="outline" className="w-full">Privacy & Refunds</Button>
                                 </Link>
                             </DialogClose>
                             <DialogClose asChild>
@@ -100,14 +100,9 @@ export function NavBar() {
                             <DropdownMenuItem>fifth</DropdownMenuItem>
                         </DropdownMenuContent>
                     </DropdownMenu>
-                    <DropdownMenu>
-                        <DropdownMenuTrigger><Button variant="ghost">Privacy & Refunds</Button></DropdownMenuTrigger>
-                        <DropdownMenuContent>
-                            <DropdownMenuItem><Link href="/policy">Policy Page</Link></DropdownMenuItem>
-                            {/*privacy and refund could be in the footer*/}
-                            <DropdownMenuItem>Glossary</DropdownMenuItem>
-                        </DropdownMenuContent>
-                    </DropdownMenu>
+                    <Link href="/policy">
+                        <Button variant="ghost">Privacy & Refunds</Button>
+                    </Link>
                 </div>
             </div>
         </div>

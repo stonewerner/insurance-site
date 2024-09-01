@@ -62,6 +62,7 @@ export default function Footer() {
           </div>
           <div className="mb-4 flex flex-col gap-4 md:mb-0 md:flex-row">
             <Link href="/policy">Policy Page</Link>
+            <Link href="/glossary">Glossary</Link>
           </div>
         </Container>
         <Container className="not-prose flex flex-col justify-between gap-6 border-t md:flex-row md:items-center md:gap-2">
