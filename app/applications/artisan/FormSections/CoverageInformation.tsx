@@ -6,9 +6,9 @@ import { Textarea } from "@/components/ui/textarea"
 import { UseFormReturn } from "react-hook-form";
 import { z } from "zod";
 
-import { formSchema } from '../formData';
+import { formSchema, FormValues } from '../formData';
 
-type FormValues = z.infer<typeof formSchema>;
+//type FormValues = z.infer<typeof formSchema>;
 
 interface CoverageInformationProps {
   form: UseFormReturn<FormValues>;

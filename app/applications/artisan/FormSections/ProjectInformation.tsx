@@ -6,9 +6,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { UseFormReturn } from "react-hook-form";
 import { z } from "zod";
 
-import { states, formSchema } from '../formData';
+import { states, formSchema, FormValues } from '../formData';
 
-type FormValues = z.infer<typeof formSchema>;
+//type FormValues = z.infer<typeof formSchema>;
 
 interface ProjectInformationProps {
   form: UseFormReturn<FormValues>;

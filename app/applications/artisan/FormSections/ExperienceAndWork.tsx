@@ -4,9 +4,9 @@ import { Input } from "@/components/ui/input"
 import { UseFormReturn } from "react-hook-form";
 import { z } from "zod";
 
-import { formSchema } from '../formData';
+import { formSchema, FormValues } from '../formData';
 
-type FormValues = z.infer<typeof formSchema>;
+//type FormValues = z.infer<typeof formSchema>;
 
 interface ExperienceAndWorkProps {
   form: UseFormReturn<FormValues>;

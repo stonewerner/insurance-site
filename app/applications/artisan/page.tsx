@@ -19,36 +19,26 @@ import ProjectInformation from './FormSections/ProjectInformation';
 import AdditionalQuestions from './FormSections/AdditionalQuestions';
 
 
-import { jobClasses, states, formSchema } from './formData';
+import { jobClasses, states, formSchema, FormValues } from './formData';
 
 
 
 export default function ArtisanGeneralLiabilityForm() {
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       // General Information
-      contractorLicenseNumber: '',
-      insuredContactName: '',
-      companyName: '',
-      phone: '',
-      fax: '',
-      email: '',
-      policyTermRequested: '',
-      mailingAddress: {
-        street: '',
-        city: '',
-        state: '',
-        zip: '',
-      },
-      premiseAddress: {
-        street: '',
-        city: '',
-        state: '',
-        zip: '',
-      },
+      contractorLicenseNumber: undefined,
+      insuredContactName: undefined,
+      companyName: undefined,
+      phone: undefined,
+      fax: undefined,
+      email: undefined,
+      policyTermRequested: undefined,
+      mailingAddress: undefined,
+      premiseAddress: undefined,
       // Payroll Information
-      jobClass: jobClasses[0],
+      jobClass: undefined,
       expectedAnnualPayroll: 0,
       hourlyWage: 0,
       grossReceipts: {
@@ -56,14 +46,14 @@ export default function ArtisanGeneralLiabilityForm() {
         last12Months: 0,
       },
       // Operations Description
-      operationsDescription: '',
-      activeOwners: 'none',
+      operationsDescription: undefined,
+      activeOwners: undefined,
       // Coverage Information
-      currentCoverage: 'no',
-      currentCoverageDetails: '',
-      coverageLimits: '1000000',
-      specialCoverages: 'no',
-      specialCoveragesDescription: '',
+      currentCoverage: undefined,
+      currentCoverageDetails: undefined,
+      coverageLimits: undefined,
+      specialCoverages: undefined,
+      specialCoveragesDescription: undefined,
       // Experience and Work
       yearsExperienceContracting: 0,
       yearsExperienceEntity: 0,
@@ -81,43 +71,43 @@ export default function ArtisanGeneralLiabilityForm() {
         constructionManager: 0,
       },
       // Project Information
-      operatingStates: states[0],
-      otherOperatingStates: '',
-      largeProject1: '',
-      largeProject2: '',
-      pastLargeProject1: '',
-      pastLargeProject2: '',
+      operatingStates: undefined,
+      otherOperatingStates: undefined,
+      largeProject1: undefined,
+      largeProject2: undefined,
+      pastLargeProject1: undefined,
+      pastLargeProject2: undefined,
       averageJobValue: 0,
       newHomesNextYear: 0,
       maxNewHomesInYear: 0,
       // Additional Information
-      workInvolvingCondos: 'no',
-      workInvolvingApartments: 'no',
-      workInvolvingLargeProjects: 'no',
-      newConstructionFromGround: 'no',
-      newConstructionDetails: '',
-      heavyStructuralEngineering: 'no',
-      heavyStructuralEngineeringDescription: '',
+      workInvolvingCondos: undefined,
+      workInvolvingApartments: undefined,
+      workInvolvingLargeProjects: undefined,
+      newConstructionFromGround: undefined,
+      newConstructionDetails: undefined,
+      heavyStructuralEngineering: undefined,
+      heavyStructuralEngineeringDescription: undefined,
       retainingWallHeight: 0,
-      roofWork: 'no',
-      roofWorkDescription: '',
+      roofWork: undefined,
+      roofWorkDescription: undefined,
       hotTarPercentage: 0,
       torchPercentage: 0,
       totalPercentage: 0,
-      constructionManager: 'no',
-      claimsHistory: 'no',
-      claimsDetails: '',
-      additionalComments: '',      
-  }});
+      constructionManager: undefined,
+      claimsHistory: undefined,
+      claimsDetails: undefined,
+      additionalComments: undefined,      
+    },
+  });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
-      console.log("onSubmit function called");
       console.log(values);
-      console.log(form.formState);
-      console.log(form.formState.errors);
+      //console.log(form.formState);
+      //console.log(form.formState.errors);
     } catch (error) {
-      console.error("Error in onSubmit:", error);
+      //console.error("Error in onSubmit:", error);
     }
   }
 
@@ -127,21 +117,13 @@ export default function ArtisanGeneralLiabilityForm() {
         <h1 className="text-4xl font-bold mb-8">Artisan and General Liability Application</h1>
         
         <Form {...form}>
-        <form 
+          <form 
             onSubmit={(e) => {
-              console.log("Form state before submission:", form.getValues());
-              console.log("Form errors before submission:", form.formState.errors);
-              console.log("Form is valid:", form.formState.isValid);
-              console.log("Before form.handleSubmit");
-              console.log("Form object:", form);
-              const result = form.handleSubmit(onSubmit)(e);
-              console.log("After form.handleSubmit, result:", result);
-              
-              result.then(() => {
-                console.log("Form submission completed");
-              }).catch((error) => {
-                console.error("Form submission error:", error);
-              });
+              e.preventDefault(); // Prevent default form submission
+              //console.log("Form state before submission:", form.getValues());
+              //console.log("Form errors before submission:", form.formState.errors);
+              //console.log("Form is valid:", form.formState.isValid);
+              form.handleSubmit(onSubmit)(e);
             }} 
             className="space-y-8"
           >

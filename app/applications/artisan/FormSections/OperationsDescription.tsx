@@ -5,11 +5,11 @@ import { Textarea } from "@/components/ui/textarea"
 
 import { z } from 'zod';
 import { UseFormReturn } from 'react-hook-form';
-import { formSchema } from '../formData';
+import { formSchema, FormValues } from '../formData';
 
 
 // Define the shape of your form values
-type FormValues = z.infer<typeof formSchema>;
+//type FormValues = z.infer<typeof formSchema>;
 
 interface OperationsDescriptionProps {
   form: UseFormReturn<FormValues>;

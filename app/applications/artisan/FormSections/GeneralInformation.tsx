@@ -5,10 +5,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { UseFormReturn } from "react-hook-form";
 import { z } from 'zod';
 
-import { states, formSchema } from '../formData';
+import { states, formSchema, FormValues } from '../formData';
 
 // Define the shape of your form values
-type FormValues = z.infer<typeof formSchema>;
+//type FormValues = z.infer<typeof formSchema>;
 
 interface GeneralInformationProps {
   form: UseFormReturn<FormValues>;

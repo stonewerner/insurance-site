@@ -5,9 +5,9 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { UseFormReturn } from "react-hook-form";
 import { z } from "zod";
 
-import { jobClasses, formSchema } from '../formData';
+import { jobClasses, formSchema, FormValues } from '../formData';
 
-type FormValues = z.infer<typeof formSchema>;
+//type FormValues = z.infer<typeof formSchema>;
 
 interface PayrollInformationProps {
   form: UseFormReturn<FormValues>;

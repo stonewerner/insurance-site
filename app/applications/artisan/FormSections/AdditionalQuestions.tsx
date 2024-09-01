@@ -5,9 +5,9 @@ import { Textarea } from "@/components/ui/textarea"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { UseFormReturn } from "react-hook-form";
 import { z } from "zod";
-import { formSchema } from '../formData';
+import { formSchema, FormValues } from '../formData';
 
-type FormValues = z.infer<typeof formSchema>;
+//type FormValues = z.infer<typeof formSchema>;
 
 interface AdditionalQuestionsProps {
   form: UseFormReturn<FormValues>;
