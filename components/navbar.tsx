@@ -54,7 +54,7 @@ export function NavBar() {
                                 </Link>
                             </DialogClose>
                             <DialogClose asChild>
-                                <Link href="/">
+                                <Link href="/services">
                                     <Button variant="outline" className="w-full">Online Services</Button>
                                 </Link>
                             </DialogClose><DialogClose asChild>
@@ -90,16 +90,9 @@ export function NavBar() {
                     <Link href="/applications">
                         <Button variant="ghost">Applications</Button>
                     </Link>
-                    <DropdownMenu>
-                        <DropdownMenuTrigger><Button variant="ghost">Online Services</Button></DropdownMenuTrigger>
-                        <DropdownMenuContent>
-                            <DropdownMenuItem>first</DropdownMenuItem>
-                            <DropdownMenuItem>second</DropdownMenuItem>
-                            <DropdownMenuItem>third</DropdownMenuItem>
-                            <DropdownMenuItem>fourth</DropdownMenuItem>
-                            <DropdownMenuItem>fifth</DropdownMenuItem>
-                        </DropdownMenuContent>
-                    </DropdownMenu>
+                    <Link href="/services">
+                        <Button variant="ghost">Online Services</Button>
+                    </Link>
                     <Link href="/policy">
                         <Button variant="ghost">Privacy & Refunds</Button>
                     </Link>

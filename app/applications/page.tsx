@@ -5,20 +5,15 @@ import { Section, Container } from '@/components/craft';
 
 const applicationForms = [
   { name: "Artisan and General Liability", path: "/applications/artisan" },
-  { name: "Commercial Auto Insurance", path: "/applications/artisan" },
-  { name: "Workers' Compensation Insurance", path: "/applications/artisan" },
-  { name: "Property Insurance", path: "/applications/artisan" },
-  { name: "Professional Liability Insurance", path: "/applications/artisan" },
-  { name: "Umbrella Insurance", path: "/applications/artisan" },
-  { name: "Cyber Liability Insurance", path: "/applications/artisan" },
-  { name: "Builders Risk Insurance", path: "/applications/artisan" },
-  { name: "Contractors Equipment Insurance", path: "/applications/artisan" },
-  { name: "Surety Bond", path: "/applications/artisan" },
-  { name: "Business Owners Policy (BOP)", path: "/applications/artisan" },
-  { name: "Environmental Liability Insurance", path: "/applications/artisan" },
-  { name: "Inland Marine Insurance", path: "/applications/artisan" },
-  { name: "Employment Liability Insurance", path: "/applications/artisan" },
-  { name: "Directors Liability", path: "/applications/artisan" },
+  { name: "Roofing Contractor Liability", path: "/applications/artisan" },
+  { name: "Workers' Compensation", path: "/applications/artisan" },
+  { name: "Commercial Vehicle Insurance", path: "/applications/artisan" },
+  { name: "Contractors License Bond", path: "/applications/artisan" },
+  { name: "Bid & Performance Bond", path: "/applications/artisan" },
+  { name: "Equipment Coverage", path: "/applications/artisan" },
+  { name: "Property Coverage", path: "/applications/artisan" },
+  { name: "Business Owners Policy", path: "/applications/artisan" },
+  { name: "Group Health and Disability", path: "/applications/artisan" },
 ];
 
 export default function ApplicationsPage() {
