@@ -43,6 +43,13 @@ export const formSchema = z.object({
   // Operations Description:
   operationsDescription: z.string(),
   activeOwners: z.enum(['1', '2', '3', '4', '5', 'none']),
+  // Coverage Information:
+  currentCoverage: z.enum(['yes', 'no']),
+  currentCoverageDetails: z.string().optional(),
+  coverageLimits: z.enum(['300000', '500000', '1000000', '2000000', 'other']),
+  specialCoverages: z.enum(['yes', 'no']),
+  specialCoveragesDescription: z.string().optional(),
+  
 });
 
 export default function ArtisanGeneralLiabilityForm() {
@@ -72,6 +79,13 @@ export default function ArtisanGeneralLiabilityForm() {
       // Operations Description
       operationsDescription: '',
       activeOwners: 'none',
+      // Coverage Information
+      currentCoverage: 'no',
+      currentCoverageDetails: '',
+      coverageLimits: '1000000',
+      specialCoverages: 'no',
+      specialCoveragesDescription: '',
+      
   }});
 
   function onSubmit(values: z.infer<typeof formSchema>) {

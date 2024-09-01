@@ -3,8 +3,18 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage, FormDescripti
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { UseFormReturn } from "react-hook-form";
+import { z } from "zod";
 
-export default function CoverageInformation({ form }) {
+import { formSchema } from '../page';
+
+type FormValues = z.infer<typeof formSchema>;
+
+interface CoverageInformationProps {
+  form: UseFormReturn<FormValues>;
+}
+
+export default function CoverageInformation({ form }: CoverageInformationProps) {
   return (
     <div>
       <h2 className="text-2xl font-semibold mb-4">4. Coverage Information</h2>
