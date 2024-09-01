@@ -103,15 +103,22 @@ export default function ArtisanGeneralLiabilityForm() {
       roofWorkDescription: '',
       hotTarPercentage: 0,
       torchPercentage: 0,
+      totalPercentage: 0,
       constructionManager: 'no',
       claimsHistory: 'no',
       claimsDetails: '',
       additionalComments: '',      
   }});
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Handle form submission
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      console.log("onSubmit function called");
+      console.log(values);
+      console.log(form.formState);
+      console.log(form.formState.errors);
+    } catch (error) {
+      console.error("Error in onSubmit:", error);
+    }
   }
 
   return (
@@ -120,7 +127,24 @@ export default function ArtisanGeneralLiabilityForm() {
         <h1 className="text-4xl font-bold mb-8">Artisan and General Liability Application</h1>
         
         <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+        <form 
+            onSubmit={(e) => {
+              console.log("Form state before submission:", form.getValues());
+              console.log("Form errors before submission:", form.formState.errors);
+              console.log("Form is valid:", form.formState.isValid);
+              console.log("Before form.handleSubmit");
+              console.log("Form object:", form);
+              const result = form.handleSubmit(onSubmit)(e);
+              console.log("After form.handleSubmit, result:", result);
+              
+              result.then(() => {
+                console.log("Form submission completed");
+              }).catch((error) => {
+                console.error("Form submission error:", error);
+              });
+            }} 
+            className="space-y-8"
+          >
             <GeneralInformation form={form} />
             <PayrollInformation form={form} />
             <OperationsDescription form={form} />
