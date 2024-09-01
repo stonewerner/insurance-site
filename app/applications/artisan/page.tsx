@@ -18,6 +18,9 @@ import ExperienceAndWork from './FormSections/ExperienceAndWork';
 import ProjectInformation from './FormSections/ProjectInformation';
 import AdditionalQuestions from './FormSections/AdditionalQuestions';
 
+
+import { jobClasses } from './jobClasses';
+
 // Define the form schema for all the components
 export const formSchema = z.object({
   // General Information:
@@ -39,6 +42,14 @@ export const formSchema = z.object({
     city: z.string(),
     state: z.string(),
     zip: z.string(),
+  }),
+  // Payroll Information:
+  jobClass: z.enum(jobClasses),
+  expectedAnnualPayroll: z.number().min(0),
+  hourlyWage: z.number().min(0),
+  grossReceipts: z.object({
+    next12Months: z.number().min(0),
+    last12Months: z.number().min(0),
   }),
   // Operations Description:
   operationsDescription: z.string(),
@@ -75,6 +86,14 @@ export default function ArtisanGeneralLiabilityForm() {
         city: '',
         state: '',
         zip: '',
+      },
+      // Payroll Information
+      jobClass: jobClasses[0],
+      expectedAnnualPayroll: 0,
+      hourlyWage: 0,
+      grossReceipts: {
+        next12Months: 0,
+        last12Months: 0,
       },
       // Operations Description
       operationsDescription: '',

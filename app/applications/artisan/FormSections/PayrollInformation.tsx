@@ -2,14 +2,21 @@ import React from 'react';
 import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { UseFormReturn } from "react-hook-form";
+import { z } from "zod";
 
-const jobClasses = [
-  "Air Conditioning System Installation",
-  "Appliance & Access. Install., Service, Repair",
-  // ... add all job classes here
-];
+import { formSchema } from '../page';
+import { jobClasses } from '../jobClasses';
 
-export default function PayrollInformation({ form }) {
+type FormValues = z.infer<typeof formSchema>;
+
+interface PayrollInformationProps {
+  form: UseFormReturn<FormValues>;
+}
+
+
+
+export default function PayrollInformation({ form }: PayrollInformationProps) {
   return (
     <div>
       <h2 className="text-2xl font-semibold mb-4">2. Payroll excluding Owners, Officers & Clerical</h2>
