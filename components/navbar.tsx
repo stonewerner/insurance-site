@@ -44,6 +44,25 @@ export function NavBar() {
                                 </Link>
                             </DialogClose>
                             <DialogClose asChild>
+                                <Link href="/about">
+                                    <Button variant="outline" className="w-full">About Us</Button>
+                                </Link>
+                            </DialogClose>
+                            <DialogClose asChild>
+                                <Link href="/applications">
+                                    <Button variant="outline" className="w-full">Applications</Button>
+                                </Link>
+                            </DialogClose>
+                            <DialogClose asChild>
+                                <Link href="/">
+                                    <Button variant="outline" className="w-full">Online Services</Button>
+                                </Link>
+                            </DialogClose><DialogClose asChild>
+                                <Link href="/policy">
+                                    <Button variant="outline" className="w-full">Policy Page</Button>
+                                </Link>
+                            </DialogClose>
+                            <DialogClose asChild>
                                 <Link href="#footer">
                                     <Button variant="outline" className="w-full">Contact Us</Button>
                                 </Link>
