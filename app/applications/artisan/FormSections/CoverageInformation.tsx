@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { UseFormReturn } from "react-hook-form";
 import { z } from "zod";
 
-import { formSchema } from '../page';
+import { formSchema } from '../formData';
 
 type FormValues = z.infer<typeof formSchema>;
 

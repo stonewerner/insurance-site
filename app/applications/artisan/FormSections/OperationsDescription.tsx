@@ -5,7 +5,7 @@ import { Textarea } from "@/components/ui/textarea"
 
 import { z } from 'zod';
 import { UseFormReturn } from 'react-hook-form';
-import { formSchema } from '../page';
+import { formSchema } from '../formData';
 
 
 // Define the shape of your form values

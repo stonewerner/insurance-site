@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input"
 import { UseFormReturn } from "react-hook-form";
 import { z } from "zod";
 
-import { formSchema } from '../page';
+import { formSchema } from '../formData';
 
 type FormValues = z.infer<typeof formSchema>;
 

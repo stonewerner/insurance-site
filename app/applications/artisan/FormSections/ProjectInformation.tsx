@@ -6,8 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { UseFormReturn } from "react-hook-form";
 import { z } from "zod";
 
-import { formSchema } from '../page';
-import { states } from '../formData';
+import { states, formSchema } from '../formData';
 
 type FormValues = z.infer<typeof formSchema>;
 
