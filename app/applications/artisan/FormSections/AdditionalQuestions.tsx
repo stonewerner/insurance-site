@@ -18,7 +18,7 @@ export default function AdditionalQuestions({ form }: AdditionalQuestionsProps) 
     <div>
       <h2 className="text-2xl font-semibold mb-4">Additional Questions</h2>
       
-      <h3 className="text-xl font-semibold mt-6 mb-2">16. The following question applies to work done in any capacity, including general contractor, developer, artisan, remodeling contractor, site work contractor, supplier, etc.</h3>
+      <h3 className="text-xl font-semibold mt-6 mb-2">13. The following question applies to work done in any capacity, including general contractor, developer, artisan, remodeling contractor, site work contractor, supplier, etc.</h3>
       
       <FormField
         control={form.control}
@@ -58,7 +58,7 @@ export default function AdditionalQuestions({ form }: AdditionalQuestionsProps) 
         name="newConstructionDetails"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>If yes to d, describe in detail:</FormLabel>
+            <FormLabel>If yes to a, describe in detail:</FormLabel>
             <FormControl>
               <Textarea {...field} />
             </FormControl>
@@ -67,7 +67,7 @@ export default function AdditionalQuestions({ form }: AdditionalQuestionsProps) 
         )}
       />
 
-      <h3 className="text-xl font-semibold mt-6 mb-2">17. Heavy structural engineering techniques</h3>
+      <h3 className="text-xl font-semibold mt-6 mb-2">14. Heavy structural engineering techniques</h3>
 
       <FormField
         control={form.control}
@@ -128,7 +128,7 @@ export default function AdditionalQuestions({ form }: AdditionalQuestionsProps) 
         )}
       />
 
-      <h3 className="text-xl font-semibold mt-6 mb-2">18. Roof work</h3>
+      <h3 className="text-xl font-semibold mt-6 mb-2">15. Roof work</h3>
 
       <FormField
         control={form.control}
@@ -177,7 +177,7 @@ export default function AdditionalQuestions({ form }: AdditionalQuestionsProps) 
 
       {/* Add fields for Hot tar %, Torch %, and Total % */}
 
-      <h3 className="text-xl font-semibold mt-6 mb-2">19. Construction manager</h3>
+      <h3 className="text-xl font-semibold mt-6 mb-2">16. Construction manager</h3>
 
       <FormField
         control={form.control}
@@ -210,7 +210,7 @@ export default function AdditionalQuestions({ form }: AdditionalQuestionsProps) 
         )}
       />
 
-      <h3 className="text-xl font-semibold mt-6 mb-2">20. Claims history</h3>
+      <h3 className="text-xl font-semibold mt-6 mb-2">17. Claims history</h3>
 
       <FormField
         control={form.control}
@@ -257,7 +257,7 @@ export default function AdditionalQuestions({ form }: AdditionalQuestionsProps) 
         )}
       />
 
-      <h3 className="text-xl font-semibold mt-6 mb-2">21. Comments</h3>
+      <h3 className="text-xl font-semibold mt-6 mb-2">18. Comments</h3>
 
       <FormField
         control={form.control}

@@ -20,7 +20,7 @@ function Glossary() {
                 <dd>Insurance against losses from liability imposed upon employers to compensate employees and their dependents for injuries sustained by employees out of and in the course of their employment. It is predicated on the fact of employment. Negligence and/or fault are immaterial factors.</dd>
               </div>
               <div>
-                <dt className="font-semibold">Employers' Liability Insurance</dt>
+                <dt className="font-semibold">Employers&apos; Liability Insurance</dt>
                 <dd>This coverage assumes the risk of the insured employer for injuries to employees if the accident occurred within the act of employment. This coverage may cover injuries not covered by Workers Compensation laws. Financial recovery is based on actual or consequential fault of the employer.</dd>
               </div>
               <div>
@@ -29,11 +29,11 @@ function Glossary() {
               </div>
               <div>
                 <dt className="font-semibold">Experience Rating</dt>
-                <dd>This is a formula established by the WCIRB to determine the modification of a base rate for each individual insured. The rating can be either above or below 100%, depending on the claim history of the employer. It is revised annually prior to the insured's renewal anniversary.</dd>
+                <dd>This is a formula established by the WCIRB to determine the modification of a base rate for each individual insured. The rating can be either above or below 100%, depending on the claim history of the employer. It is revised annually prior to the insured&apos;s renewal anniversary.</dd>
               </div>
               <div>
                 <dt className="font-semibold">Experience Rating Period</dt>
-                <dd>It is the time period used to determine an insured's Experience Rating modification. It is a three year period, going back four years from the employer's policy anniversary date and excludes the most recent year.</dd>
+                <dd>It is the time period used to determine an insured&apos;s Experience Rating modification. It is a three year period, going back four years from the employer&apos;s policy anniversary date and excludes the most recent year.</dd>
               </div>
             </dl>
           </div>
@@ -51,7 +51,7 @@ function Glossary() {
               </div>
               <div>
                 <dt className="font-semibold">Owners and Contractors Protective</dt>
-                <dd>If you have this coverage option you can be protected against liability for actions of other independent contractors and subcontractors including liability due to your failure in supervising the contractor's work.</dd>
+                <dd>If you have this coverage option you can be protected against liability for actions of other independent contractors and subcontractors including liability due to your failure in supervising the contractor&apos;s work.</dd>
               </div>
               <div>
                 <dt className="font-semibold">Personal and Advertising Injury</dt>
@@ -74,8 +74,8 @@ function Glossary() {
                 <dd>The amount you are required to pay out of the total cost of a claim against your policy; above which the insurance company will pay to the limits of that section of your policy.</dd>
               </div>
               <div>
-                <dt className="font-semibold">Bodily Injury & Property Damage</dt>
-                <dd>This section of a policy defines certain covered losses and excludes certain losses. An example of a covered loss under Bodily Injury could be "trip and fall" accidents. Property damage claims relate to damage to physical objects (an example is a building).</dd>
+                <dt className="font-semibold">Bodily Injury &amp; Property Damage</dt>
+                <dd>This section of a policy defines certain covered losses and excludes certain losses. An example of a covered loss under Bodily Injury could be &quot;trip and fall&quot; accidents. Property damage claims relate to damage to physical objects (an example is a building).</dd>
               </div>
             </dl>
           </div>

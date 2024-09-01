@@ -25,7 +25,7 @@ export default function ProjectInformation({ form }: ProjectInformationProps) {
         name="operatingStates"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>11. States in which you operate:</FormLabel>
+            <FormLabel>8. States in which you operate:</FormLabel>
             <Select onValueChange={field.onChange} defaultValue={field.value}>
               <FormControl>
                 <SelectTrigger>
@@ -57,7 +57,7 @@ export default function ProjectInformation({ form }: ProjectInformationProps) {
         )}
       />
 
-      <h3 className="text-xl font-semibold mt-6 mb-2">12. Describe your two largest projects currently underway or planned for the next year, including values:</h3>
+      <h3 className="text-xl font-semibold mt-6 mb-2">9. Describe your two largest projects currently underway or planned for the next year, including values:</h3>
       
       <FormField
         control={form.control}
@@ -87,7 +87,7 @@ export default function ProjectInformation({ form }: ProjectInformationProps) {
         )}
       />
 
-      <h3 className="text-xl font-semibold mt-6 mb-2">13. Describe your two largest projects over the past five years, including values:</h3>
+      <h3 className="text-xl font-semibold mt-6 mb-2">10. Describe your two largest projects over the past five years, including values:</h3>
       
       <FormField
         control={form.control}
@@ -122,7 +122,7 @@ export default function ProjectInformation({ form }: ProjectInformationProps) {
         name="averageJobValue"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>14. Dollar value of average job completed (Including all materials, labor & equipment):</FormLabel>
+            <FormLabel>11. Dollar value of average job completed (Including all materials, labor & equipment):</FormLabel>
             <FormControl>
               <Input {...field} type="number" />
             </FormControl>
@@ -136,7 +136,7 @@ export default function ProjectInformation({ form }: ProjectInformationProps) {
         name="newHomesNextYear"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>15a. How many new homes will you build as a general contractor in the next year?</FormLabel>
+            <FormLabel>12a. How many new homes will you build as a general contractor in the next year?</FormLabel>
             <FormControl>
               <Input {...field} type="number" />
             </FormControl>
@@ -150,7 +150,7 @@ export default function ProjectInformation({ form }: ProjectInformationProps) {
         name="maxNewHomesInYear"
         render={({ field }) => (
           <FormItem>
-            <FormLabel>15b. What is the greatest number of new homes you have built in any one year?</FormLabel>
+            <FormLabel>12b. What is the greatest number of new homes you have built in any one year?</FormLabel>
             <FormControl>
               <Input {...field} type="number" />
             </FormControl>
