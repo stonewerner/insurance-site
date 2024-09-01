@@ -6,6 +6,7 @@ import { UseFormReturn } from "react-hook-form";
 import { z } from 'zod';
 
 import { formSchema } from '../page';
+import { states } from '../formData';
 
 // Define the shape of your form values
 type FormValues = z.infer<typeof formSchema>;
@@ -161,10 +162,11 @@ export default function GeneralInformation({ form }: GeneralInformationProps) {
                   </SelectTrigger>
                 </FormControl>
                 <SelectContent>
-                  {/* Add all US states here */}
-                  <SelectItem value="AK">Alaska</SelectItem>
-                  <SelectItem value="AL">Alabama</SelectItem>
-                  {/* ... other states ... */}
+                  {states.map((state) => (
+                  <SelectItem key={state} value={state}>
+                    {state}
+                  </SelectItem>
+                    ))}
                 </SelectContent>
               </Select>
               <FormMessage />
