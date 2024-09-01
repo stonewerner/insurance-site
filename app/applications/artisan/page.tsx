@@ -5,20 +5,8 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { Button } from "@/components/ui/button"
-import {
-  Form,
-  FormControl,
-  FormDescription,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form"
-import { Input } from "@/components/ui/input"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Checkbox } from "@/components/ui/checkbox"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Textarea } from "@/components/ui/textarea"
+import { Form } from "@/components/ui/form"
+
 import { Section, Container } from '@/components/craft';
 
 // Import form section components
@@ -30,18 +18,61 @@ import ExperienceAndWork from './FormSections/ExperienceAndWork';
 import ProjectInformation from './FormSections/ProjectInformation';
 import AdditionalQuestions from './FormSections/AdditionalQuestions';
 
-// Define the form schema
-const formSchema = z.object({
-  // The schema will be defined in each section component
+// Define the form schema for all the components
+export const formSchema = z.object({
+  // General Information:
+  contractorLicenseNumber: z.string(),
+  insuredContactName: z.string(),
+  companyName: z.string(),
+  phone: z.string(),
+  fax: z.string().optional(),
+  email: z.string().email(),
+  policyTermRequested: z.string(),
+  mailingAddress: z.object({
+    street: z.string(),
+    city: z.string(),
+    state: z.string(),
+    zip: z.string(),
+  }),
+  premiseAddress: z.object({
+    street: z.string(),
+    city: z.string(),
+    state: z.string(),
+    zip: z.string(),
+  }),
+  // Operations Description:
+  operationsDescription: z.string(),
+  activeOwners: z.enum(['1', '2', '3', '4', '5', 'none']),
 });
 
 export default function ArtisanGeneralLiabilityForm() {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      // Default values will be set in each section component
-    },
-  });
+      // General Information
+      contractorLicenseNumber: '',
+      insuredContactName: '',
+      companyName: '',
+      phone: '',
+      fax: '',
+      email: '',
+      policyTermRequested: '',
+      mailingAddress: {
+        street: '',
+        city: '',
+        state: '',
+        zip: '',
+      },
+      premiseAddress: {
+        street: '',
+        city: '',
+        state: '',
+        zip: '',
+      },
+      // Operations Description
+      operationsDescription: '',
+      activeOwners: 'none',
+  }});
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     // Handle form submission

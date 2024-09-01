@@ -3,7 +3,19 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Textarea } from "@/components/ui/textarea"
 
-export default function OperationsDescription({ form }) {
+import { z } from 'zod';
+import { UseFormReturn } from 'react-hook-form';
+import { formSchema } from '../page';
+
+
+// Define the shape of your form values
+type FormValues = z.infer<typeof formSchema>;
+
+interface OperationsDescriptionProps {
+  form: UseFormReturn<FormValues>;
+}
+
+export default function OperationsDescription({ form }: OperationsDescriptionProps) {
   return (
     <div>
       <h2 className="text-2xl font-semibold mb-4">3. Describe your operations</h2>
@@ -30,42 +42,14 @@ export default function OperationsDescription({ form }) {
             <FormLabel>Number of owners, officers, and partners active at job sites or performing supervisory duties</FormLabel>
             <FormControl>
               <RadioGroup onValueChange={field.onChange} defaultValue={field.value}>
-                <FormItem className="flex items-center space-x-3 space-y-0">
-                  <FormControl>
-                    <RadioGroupItem value="1" />
-                  </FormControl>
-                  <FormLabel className="font-normal">1</FormLabel>
-                </FormItem>
-                <FormItem className="flex items-center space-x-3 space-y-0">
-                  <FormControl>
-                    <RadioGroupItem value="2" />
-                  </FormControl>
-                  <FormLabel className="font-normal">2</FormLabel>
-                </FormItem>
-                <FormItem className="flex items-center space-x-3 space-y-0">
-                  <FormControl>
-                    <RadioGroupItem value="3" />
-                  </FormControl>
-                  <FormLabel className="font-normal">3</FormLabel>
-                </FormItem>
-                <FormItem className="flex items-center space-x-3 space-y-0">
-                  <FormControl>
-                    <RadioGroupItem value="4" />
-                  </FormControl>
-                  <FormLabel className="font-normal">4</FormLabel>
-                </FormItem>
-                <FormItem className="flex items-center space-x-3 space-y-0">
-                  <FormControl>
-                    <RadioGroupItem value="5" />
-                  </FormControl>
-                  <FormLabel className="font-normal">5</FormLabel>
-                </FormItem>
-                <FormItem className="flex items-center space-x-3 space-y-0">
-                  <FormControl>
-                    <RadioGroupItem value="none" />
-                  </FormControl>
-                  <FormLabel className="font-normal">none</FormLabel>
-                </FormItem>
+                {['1', '2', '3', '4', '5', 'none'].map((value) => (
+                  <FormItem key={value} className="flex items-center space-x-3 space-y-0">
+                    <FormControl>
+                      <RadioGroupItem value={value} />
+                    </FormControl>
+                    <FormLabel className="font-normal">{value}</FormLabel>
+                  </FormItem>
+                ))}
               </RadioGroup>
             </FormControl>
             <FormMessage />

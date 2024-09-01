@@ -3,34 +3,16 @@ import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/comp
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { UseFormReturn } from "react-hook-form";
+import { z } from 'zod';
+
+import { formSchema } from '../page';
 
 // Define the shape of your form values
-interface FormValues {
-    contractorLicenseNumber: string;
-    insuredContactName: string;
-    companyName: string;
-    phone: string;
-    fax?: string;
-    email: string;
-    policyTermRequested: string;
-    mailingAddress: {
-      street: string;
-      city: string;
-      state: string;
-      zip: string;
-    };
-    premiseAddress: {
-      street: string;
-      city: string;
-      state: string;
-      zip: string;
-    };
-    // Add other form fields as needed
-  }
-  
-  interface GeneralInformationProps {
-    form: UseFormReturn<FormValues>;
-  }
+type FormValues = z.infer<typeof formSchema>;
+
+interface GeneralInformationProps {
+  form: UseFormReturn<FormValues>;
+}
 
 
 export default function GeneralInformation({ form }: GeneralInformationProps) {
