@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input"
 export default function ExperienceAndWork({ form }) {
   return (
     <div>
-      <h2 className="text-2xl font-semibold mb-4">7. Experience and Work</h2>
+      <h2 className="text-2xl font-semibold mb-4">5. Experience and Work</h2>
       
       <div className="space-y-4">
         <FormField
@@ -37,7 +37,7 @@ export default function ExperienceAndWork({ form }) {
         />
       </div>
 
-      <h3 className="text-xl font-semibold mt-6 mb-2">8. What percentage of your work is: (each line must add to 100%)</h3>
+      <h3 className="text-xl font-semibold mt-6 mb-2">6. What percentage of your work is: (each line must add to 100%)</h3>
       
       <div className="space-y-4">
         <div className="flex space-x-4">
@@ -125,7 +125,7 @@ export default function ExperienceAndWork({ form }) {
         </div>
       </div>
 
-      <h3 className="text-xl font-semibold mt-6 mb-2">9. What percentage of your work is as a:</h3>
+      <h3 className="text-xl font-semibold mt-6 mb-2">7. What percentage of your work is as a:</h3>
       
       <div className="flex space-x-4">
         <FormField
