@@ -11,7 +11,7 @@ const AboutUsPage = () => {
           <div>
             <h2 className="text-2xl font-semibold mb-4">Company Story</h2>
             <p className="mb-4">
-              <strong>For more than 20 years, Lange & Associates Insurance Agency has specialized in the insurance needs of the business and industry.</strong> We have placed thousands of Commercial Insurance policies and over 90% of our clients are Businesses which is why we have been dubbed &quot;The Commercial Insurance Specialists.&quot; We offer unbeatable value on Apartment Building Packages, Condo Association Packages, Home Builder and Developer Specialized Policies & Programs, Business Owner Package Policies (BOP) and other Commercial Policies.
+              <strong>For more than 35 years, Lange & Associates Insurance Agency has specialized in the insurance needs of the business and industry.</strong> We have placed thousands of Commercial Insurance policies and over 90% of our clients are Businesses which is why we have been dubbed &quot;The Commercial Insurance Specialists.&quot; We offer unbeatable value on Apartment Building Packages, Condo Association Packages, Home Builder and Developer Specialized Policies & Programs, Business Owner Package Policies (BOP) and other Commercial Policies.
             </p>
             <p className="mb-4">
               Our exceptionally knowledgeable staff delivers a level of service second to none. We provide General Liability, Workers&apos; Compensation, Commercial Auto, Property & Inland Marine, as well as Surety Bonds and Group Health Insurance at the most competitive premiums. We can also assist you with risk management and loss control services.

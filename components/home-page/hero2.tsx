@@ -47,7 +47,7 @@ export default function Hero2() {
           </h1>
           <h3 className="text-muted-foreground">
             <Balancer>
-              &quot;The Contractors&apos; Insurance Specialist.&quot; We&apos;ve been providing expert insurance solutions for over 25 years.
+              &quot;The Contractors&apos; Insurance Specialist.&quot; We&apos;ve been providing expert insurance solutions for over 35 years.
             </Balancer>
           </h3>
           <div className="my-8 h-96 w-full overflow-hidden rounded-lg border md:h-[480px] md:rounded-xl relative">

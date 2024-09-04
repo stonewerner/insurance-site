@@ -25,7 +25,7 @@ export default function Footer() {
             </Link>
             <p>
                 <Balancer>
-                    Lange and Associates has been &quot;The Contractors&apos; Insurance Specialist&quot; for over 25 years.
+                    Lange and Associates has been &quot;The Contractors&apos; Insurance Specialist&quot; for over 35 years.
               </Balancer>
             </p>
           </div>
@@ -37,23 +37,24 @@ export default function Footer() {
               </p>
               <p className="italic">&quot;The Contractors&apos; Insurance Specialist&quot;</p>
               <p>Jonathan Lange, CIC, CRM</p>
+              <p>CA License# 0760031</p>
             </div>
             <div className="flex flex-col gap-2">
               <div className="flex flex-col gap-1">
                 <h5 className="font-semibold">CA Office</h5>
                 <p className="flex items-start gap-2">
                   <MapPin size={16} className="mt-1 flex-shrink-0" />
-                  <span>7255 Winnetka Ave. Suite 109 Winnetka, CA 91306</span>
+                  <span>22300 Cohasset St. Canoga Park, CA 91303</span>
                 </p>
                 <p>Tel: (818) 886-6800</p>
                 <p>Cell: (818) 292-1246</p>
-                <p>Fax: (818) 889-8659</p>
+                <p>Fax: (818) 886-8659</p>
               </div>
               <div className="flex flex-col gap-1 mt-4">
                 <h5 className="font-semibold">NY Office</h5>
                 <p className="flex items-start gap-2">
                   <MapPin size={16} className="mt-1 flex-shrink-0" />
-                  <span>915 Wynnewood Rd. Unit G1 Pelham Manor, NY 10803</span>
+                  <span>604 Monterey Ave. Pelham Manor, NY 10803</span>
                 </p>
                 <p>Tel: (914) 738-1212</p>
                 <p>Cell: (818) 292-1246</p>
