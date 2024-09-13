@@ -20,7 +20,7 @@ export default function Footer() {
                 alt="Logo"
                 width={350}
                 height={63}
-                className="transition-all hover:opacity-75 dark:invert"
+                className="transition-all hover:opacity-75"
               />
             </Link>
             <p>

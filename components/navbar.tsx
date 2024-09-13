@@ -6,9 +6,8 @@ import * as React from "react"
 import { Dialog, DialogClose } from "./ui/dialog"
 import { Button } from "./ui/button"
 import { NavigationMenu, NavigationMenuLink, NavigationMenuList } from "./ui/navigation-menu"
-// import ModeToggle from "../mode-toggle"
+import { ModeToggle } from "./mode-toggle"
 import { SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet"
-//import ModeToggle from "./mode-toggle"
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -96,6 +95,7 @@ export function NavBar() {
                     <Link href="/policy">
                         <Button variant="ghost">Privacy & Refunds</Button>
                     </Link>
+                    <ModeToggle />
                 </div>
             </div>
         </div>
