@@ -40,11 +40,6 @@ export default function Hero3() {
                 Get a Free Quote <ArrowRight className="ml-3 w-8" />
             </Link>
         </Button>
-          <h3 className="text-muted-foreground mb-8"> {/* Added bottom margin */}
-            <Balancer>
-              &quot;The Contractors&apos; Insurance Specialist.&quot; <br /> We&apos;ve been providing expert insurance solutions for over 35 years.
-            </Balancer>
-          </h3>
           <div className="h-96 w-full overflow-hidden rounded-lg border md:h-[480px] md:rounded-xl relative">
             {images.map((img, index) => (
               <Slide direction="left" in={activeStep === index} key={index}>
@@ -61,6 +56,11 @@ export default function Hero3() {
               </Slide>
             ))}
           </div>
+          <h3 className="text-muted-foreground mb-8"> {/* Added bottom margin */}
+            <Balancer>
+              &quot;The Contractors&apos; Insurance Specialist.&quot; <br /> We&apos;ve been providing expert insurance solutions for over 35 years.
+            </Balancer>
+          </h3>
         </div>
       </Container>
     </Section>

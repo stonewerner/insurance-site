@@ -17,10 +17,12 @@ import {
     DropdownMenuTrigger,
   } from "@/components/ui/dropdown-menu"
 import Image from "next/image"
+import { useTheme } from "next-themes"
   
 
 
 export function NavBar() {
+    const { setTheme } = useTheme()
 
     return (
         <div className="flex items-center min-w-full w-full fixed justify-center p-2 z-[50] mt-[2rem]">
@@ -64,6 +66,16 @@ export function NavBar() {
                             <DialogClose asChild>
                                 <Link href="#footer">
                                     <Button variant="outline" className="w-full">Contact Us</Button>
+                                </Link>
+                            </DialogClose>
+                            <DialogClose asChild>
+                                <Link href="/">
+                                    <Button variant="outline" className="w-full" onClick={() => setTheme("light")}>Light Mode</Button>
+                                </Link>
+                            </DialogClose>
+                            <DialogClose asChild>
+                                <Link href="/">
+                                    <Button variant="outline" className="w-full" onClick={() => setTheme("dark")}>Dark Mode</Button>
                                 </Link>
                             </DialogClose>
                         </div>
