@@ -1,8 +1,6 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
-import Image from "next/image";
-import Link from "next/link";
 import { Section, Container } from "@/components/craft";
 import { WavyBackground } from '../ui/wavy-background';
 import { useTheme } from 'next-themes';
@@ -11,7 +9,7 @@ import Balancer from "react-wrap-balancer";
 
 export default function HeroWavy() {
     const { resolvedTheme } = useTheme();
-    const [backgroundFill, setBackgroundFill] = useState<string | null>(null);
+    const [backgroundFill, setBackgroundFill] = useState<string | undefined>(undefined);
 
     useEffect(() => {
         setBackgroundFill(resolvedTheme === 'dark' ? "black" : "white");
