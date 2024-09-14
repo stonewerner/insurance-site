@@ -18,11 +18,17 @@ import {
   } from "@/components/ui/dropdown-menu"
 import Image from "next/image"
 import { useTheme } from "next-themes"
+import { useState } from "react"
   
 
 
 export function NavBar() {
-    const { setTheme } = useTheme()
+    const { theme, setTheme } = useTheme();
+    const toggleTheme = () => {
+        setTheme(theme === 'dark' ? 'light' : 'dark');
+    }
+
+
 
     return (
         <div className="flex items-center min-w-full w-full fixed justify-center p-2 z-[50] mt-[2rem]">
@@ -69,14 +75,10 @@ export function NavBar() {
                                 </Link>
                             </DialogClose>
                             <DialogClose asChild>
-                                <Link href="/">
-                                    <Button variant="outline" className="w-full" onClick={() => setTheme("light")}>Light Mode</Button>
-                                </Link>
-                            </DialogClose>
-                            <DialogClose asChild>
-                                <Link href="/">
-                                    <Button variant="outline" className="w-full" onClick={() => setTheme("dark")}>Dark Mode</Button>
-                                </Link>
+                                    <Button 
+                                    variant="outline"
+                                    className="w-full"
+                                    onClick={toggleTheme}>Light/Dark Mode</Button>
                             </DialogClose>
                         </div>
                     </SheetContent>
