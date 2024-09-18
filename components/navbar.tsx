@@ -1,91 +1,36 @@
-"use client"
-import { cn } from "@/lib/utils"
-import { BookOpen, MenuIcon } from 'lucide-react'
-import Link from "next/link"
-import * as React from "react"
-import { Dialog, DialogClose } from "./ui/dialog"
-import { Button } from "./ui/button"
-import { NavigationMenu, NavigationMenuLink, NavigationMenuList } from "./ui/navigation-menu"
-import { ModeToggle } from "./mode-toggle"
-import { SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "./ui/sheet"
-import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger,
-  } from "@/components/ui/dropdown-menu"
-import Image from "next/image"
-import { useTheme } from "next-themes"
-import { useState } from "react"
-  
+'use client'
+import React from "react";
+import { useState } from "react";
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/navbar";
+import Link from "next/link";
+import { Button } from "./ui/button";
+import Image from "next/image";
 
+export default function NavbarComponent() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-export function NavBar() {
-    const { theme, setTheme } = useTheme();
-    const toggleTheme = () => {
-        setTheme(theme === 'dark' ? 'light' : 'dark');
-    }
+  const menuItems = [
+    "Profile",
+    "Dashboard",
+    "Activity",
+    "Analytics",
+    "System",
+    "Deployments",
+    "My Settings",
+    "Team Settings",
+    "Help & Feedback",
+    "Log Out",
+  ];
 
-
-
-    return (
-        <div className="flex items-center min-w-full w-full fixed justify-center p-2 z-[50] mt-[2rem]">
-            <div className="flex justify-between md:w-[90%] w-[95%] max-w-[1200px] border dark:border-zinc-900 dark:bg-black bg-opacity-10 relative backdrop-filter backdrop-blur-lg bg-white border-white border-opacity-20 rounded-xl p-2 shadow-lg">
-            <Dialog>
-                    <SheetTrigger className="min-[825px]:hidden p-2 transition">
-                        <MenuIcon />
-                    </SheetTrigger>
-                    <SheetContent side="left">
-                        <SheetHeader>
-                            <SheetTitle>Lange & Associates</SheetTitle>
-                            <SheetDescription>
-                            Lange and Associates has been &quot;The Contractors&apos; Insurance Specialist&quot; for over 25 years.
-                            </SheetDescription>
-                        </SheetHeader>
-                        <div className="flex flex-col space-y-3 mt-[1rem] z-[99]">
-                            <DialogClose asChild>
-                                <Link href="/">
-                                    <Button variant="outline" className="w-full">Home</Button>
-                                </Link>
-                            </DialogClose>
-                            <DialogClose asChild>
-                                <Link href="/about">
-                                    <Button variant="outline" className="w-full">About Us</Button>
-                                </Link>
-                            </DialogClose>
-                            <DialogClose asChild>
-                                <Link href="/applications">
-                                    <Button variant="outline" className="w-full">Applications</Button>
-                                </Link>
-                            </DialogClose>
-                            <DialogClose asChild>
-                                <Link href="/services">
-                                    <Button variant="outline" className="w-full">Online Services</Button>
-                                </Link>
-                            </DialogClose><DialogClose asChild>
-                                <Link href="/policy">
-                                    <Button variant="outline" className="w-full">Privacy & Refunds</Button>
-                                </Link>
-                            </DialogClose>
-                            <DialogClose asChild>
-                                <Link href="#footer">
-                                    <Button variant="outline" className="w-full">Contact Us</Button>
-                                </Link>
-                            </DialogClose>
-                            <DialogClose asChild>
-                                    <Button 
-                                    variant="outline"
-                                    className="w-full"
-                                    onClick={toggleTheme}>Light/Dark Mode</Button>
-                            </DialogClose>
-                        </div>
-                    </SheetContent>
-                </Dialog>
-                <NavigationMenu>
-                    <NavigationMenuList className="max-[825px]:hidden ">
-                        <Link href="/" className="pl-2">
+  return (
+    <Navbar onMenuOpenChange={setIsMenuOpen}>
+      <NavbarContent>
+        <NavbarMenuToggle
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className="sm:hidden"
+        />
+        <NavbarBrand>
+        <Link href="/" className="pl-2">
                         <Image
                             src="/lange-logo-trans.png"
                             alt="Lange & Associates"
@@ -94,51 +39,52 @@ export function NavBar() {
                             priority
                             />
                         </Link>
-                    </NavigationMenuList>
-                </NavigationMenu>
-                <div className="flex items-center gap-2 max-[825px]:hidden">
-                    <Link href="/about">
-                        <Button variant="ghost">About Us</Button>
-                    </Link>
-                    <Link href="/applications">
-                        <Button variant="ghost">Applications</Button>
-                    </Link>
-                    <Link href="/services">
-                        <Button variant="ghost">Online Services</Button>
-                    </Link>
-                    <Link href="/policy">
-                        <Button variant="ghost">Privacy & Refunds</Button>
-                    </Link>
-                    <ModeToggle />
-                </div>
-            </div>
-        </div>
+          <p className="font-bold text-inherit">ACME</p>
+        </NavbarBrand>
+      </NavbarContent>
 
-    )
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Features
+          </Link>
+        </NavbarItem>
+        <NavbarItem isActive>
+          <Link href="#" aria-current="page">
+            Customers
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Integrations
+          </Link>
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarContent justify="end">
+        <NavbarItem className="hidden lg:flex">
+          <Link href="#">Login</Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Button color="primary" variant="outline">
+            Sign Up
+          </Button>
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarMenu>
+        {menuItems.map((item, index) => (
+          <NavbarMenuItem key={`${item}-${index}`}>
+            <Link
+              color={
+                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
+              }
+              className="w-full"
+              href="#"
+            >
+              {item}
+            </Link>
+          </NavbarMenuItem>
+        ))}
+      </NavbarMenu>
+    </Navbar>
+  );
 }
-
-const ListItem = React.forwardRef<
-    React.ElementRef<"a">,
-    React.ComponentPropsWithoutRef<"a">
->(({ className, title, children, ...props }, ref) => {
-    return (
-        <li>
-            <NavigationMenuLink asChild>
-                <a
-                    ref={ref}
-                    className={cn(
-                        "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-                        className
-                    )}
-                    {...props}
-                >
-                    <div className="text-sm font-medium leading-none">{title}</div>
-                    <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
-                        {children}
-                    </p>
-                </a>
-            </NavigationMenuLink>
-        </li>
-    )
-})
-ListItem.displayName = "ListItem"
