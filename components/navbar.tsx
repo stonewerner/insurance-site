@@ -31,8 +31,8 @@ export function NavBar() {
 
 
     return (
-        <div className="flex items-center min-w-full w-full fixed justify-center p-2 z-[50] mt-[2rem]">
-            <div className="flex justify-between md:w-[90%] w-[95%] max-w-[1200px] border dark:border-zinc-900 dark:bg-black bg-opacity-10 relative backdrop-filter backdrop-blur-lg bg-white border-white border-opacity-20 rounded-xl p-2 shadow-lg">
+        <div className="flex items-center min-w-full w-full absolute justify-center z-[50]">
+            <div className="flex justify-between w-[100%] h-28 dark:bg-black relative backdrop-filter bg-white px-9">
             <Dialog>
                     <SheetTrigger className="min-[825px]:hidden p-2 transition">
                         <MenuIcon />
