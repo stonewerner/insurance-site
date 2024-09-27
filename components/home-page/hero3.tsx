@@ -28,7 +28,7 @@ export default function Hero3() {
   }, []); // Added empty dependency array to avoid unnecessary re-renders
 
   return (
-    <Section className="pt-0 mt-[-250px]"> {/* Removed top padding, negative margin top brings content up */}
+    <Section className="pt-2"> {/* Removed top padding, negative margin top brings content up */}
       <Container className="pt-0">
         <div className="flex flex-col items-center text-center">
         <Button

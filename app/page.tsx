@@ -7,7 +7,7 @@ import Hero from '@/components/home-page/hero';
 import React from 'react'
 import CompanyWrapper from '@/components/ui/company-wrapper';
 import Hero2 from '@/components/home-page/hero2';
-import Hero3 from '@/components/home-page/hero3';
+import Hero4 from '@/components/home-page/hero3';
 import HeroWavy from '@/components/home-page/hero-wavy';
 
 
@@ -17,8 +17,7 @@ export default function Page() {
     <Main>
       <Section>
         <Container>
-          <HeroWavy />
-          <Hero3 />
+          <Hero4 />
           <CompanyWrapper />
           <FeatureDouble />
           <FAQ />
