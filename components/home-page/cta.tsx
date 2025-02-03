@@ -33,10 +33,27 @@ export function CTA() {
   });
 
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    // Do something with the form values.
-    // ✅ This will be type-safe and validated.
-    console.log(values);
+  async function onSubmit(values: z.infer<typeof formSchema>) {
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send email");
+      }
+
+      // Clear the form on success
+      form.reset();
+      // You might want to add some user feedback here (e.g., toast notification)
+    } catch (error) {
+      console.error("Error sending email:", error);
+      // You might want to add some error feedback here
+    }
   }
 
   return (
@@ -45,7 +62,8 @@ export function CTA() {
         <h2 className="!my-0">Get a Free Quote!</h2>
         <p className="text-lg opacity-70 md:text-2xl">
           <Balancer>
-            Enter your email here and a member of our team will reach out to discuss your specific needs.
+            Enter your email here and a member of our team will reach out to
+            discuss your specific needs.
           </Balancer>
         </p>
         <Form {...form}>
