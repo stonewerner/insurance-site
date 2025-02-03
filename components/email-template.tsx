@@ -54,8 +54,9 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
           color: "#374151",
         }}
       >
-        Thank you for your interest in Lange & Associates. We have been "The
-        Contractors' Insurance Specialist" for over 35 years.
+        Thank you for your interest in Lange & Associates. We have been
+        &ldquo;The Contractors&apos; Insurance Specialist&rdquo; for over 35
+        years.
       </p>
 
       <p
@@ -67,8 +68,8 @@ export const EmailTemplate: React.FC<Readonly<EmailTemplateProps>> = ({
         }}
       >
         Our team will review your inquiry and get back to you shortly. In the
-        meantime, if you need immediate assistance, please don't hesitate to
-        contact us by phone:
+        meantime, if you need immediate assistance, please don&apos;t hesitate
+        to contact us by phone:
       </p>
 
       <p
